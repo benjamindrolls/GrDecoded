@@ -26,3 +26,12 @@ Note that access to Transit in Paris and Lyon, France requires additional proces
 [Moovit](https://moovitapp.com/index/en/public_transit-line-100-Grand_Rapids_MI-2420-850089-382380-0)  
 [Moovit - GR information ](https://moovitapp.com/index/en/public_transit-Grand_Rapids_MI-2420)  
 [Moovit API information](https://company.moovit.com/developers/?_ga=2.39785056.2132150788.1583518806-668057172.1583518806)   
+
+
+## GR data
+
+[On-Street Parking - Two Year](https://data.grandrapidsmi.gov/resource/pitz-92py.json)  
+
+[On-Street Parking Rates](https://data.grandrapidsmi.gov/resource/sndu-g7h2.json)   
+
+[On-Street Parking Zones](https://data.grandrapidsmi.gov/resource/s2v3-jher.json)   
