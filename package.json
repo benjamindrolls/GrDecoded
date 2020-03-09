@@ -51,6 +51,7 @@
     "type": "git",
     "url": "git+https://github.com/benjamindrolls/GrDecoded.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
