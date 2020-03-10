@@ -56,4 +56,7 @@ Note that access to Transit in Paris and Lyon, France requires additional proces
 [Google Map  Directions API](https://developers.google.com/maps/documentation/directions/intro)  
 **The Directions API is a service that calculates directions between locations using an HTTP request.
 
-This video illustrates the use of the Directions API to help people find their way. The video includes advice on proxying the web service via your server when you're using the API in a mobile app, to protect your API key.**
+This video illustrates the use of the Directions API to help people find their way. The video includes advice on proxying the web service via your server when you're using the API in a mobile app, to protect your API key.**  
+
+[Google Directions Service](https://developers.google.com/maps/documentation/javascript/directions)  
+**You can calculate directions (using a variety of methods of transportation) by using the DirectionsService object. This object communicates with the Google Maps API Directions Service which receives direction requests and returns an efficient path. Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account. You may either handle these directions results yourself or use the DirectionsRenderer object to render these results.**
