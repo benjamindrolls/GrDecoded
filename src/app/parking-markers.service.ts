@@ -55,12 +55,6 @@ export class ParkingMarkersService {
 
   ];
 
-  // Create markers.
-  setMarkers() {
-    for (let i = 0; i < this.features.length; i++) {
-      this.markers.push(this.features[i])
-    };
-  };
 }
 
 
