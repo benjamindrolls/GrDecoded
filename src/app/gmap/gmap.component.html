@@ -1,0 +1,19 @@
+<google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options">
+
+    <map-marker
+    *ngFor="let marker of park"
+    [position]="marker.position"
+    [label]="marker.label"
+    [title]="marker.title"
+    [options]="marker.options"
+    (mapClick)= "test()">
+    
+  </map-marker>
+
+  <map-marker *ngFor="let hotSpot of venue.venues"
+  [position]="hotSpot.position"
+  [options]="hotSpot.options"
+  >
+    
+  </map-marker>
+</google-map>
