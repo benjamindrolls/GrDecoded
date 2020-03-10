@@ -9,4 +9,11 @@
     (mapClick)= "test()">
     
   </map-marker>
+
+  <map-marker *ngFor="let hotSpot of venue.venues"
+  [position]="hotSpot.position"
+  [options]="hotSpot.options"
+  >
+    
+  </map-marker>
 </google-map>
