@@ -41,3 +41,9 @@ Note that access to Transit in Paris and Lyon, France requires additional proces
 
 [paystation parker id](https://data.grandrapidsmi.gov/resource/pitz-92py.json?paystation_or_parker_id=226355654  )   
 **To filter the dataset to only return records containing a specified value for paystation_or_parker_id simply  add a URL parameter to your URL with paystation_or_parker_id as the key and your specified value.**  
+
+
+## Google Maps transit information 
+
+[GTFS Realtime Overview](https://developers.google.com/transit/gtfs-realtime)  
+
