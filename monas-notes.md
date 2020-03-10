@@ -49,3 +49,6 @@ Note that access to Transit in Paris and Lyon, France requires additional proces
 
 [Data Layer](https://developers.google.com/maps/documentation/javascript/datalayer) 
 **The Google Maps Data layer provides a container for arbitrary geospatial data. You can use the Data layer to store your custom data, or to display GeoJSON data on a Google map.** 
+
+[Google Maps will now let users combine transit directions with biking and ride-sharing](https://www.theverge.com/2019/8/27/20835131/google-maps-combine-transit-biking-ride-sharing)
+**Google Maps is going multimodal. The navigation app announced the launch of a new feature today that pairs transit directions with biking and ride-sharing options so customers can get directions from point A to point B using a variety of transportation modes.**
