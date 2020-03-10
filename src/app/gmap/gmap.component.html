@@ -1,12 +1,15 @@
 <google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options">
 
     <map-marker
-    *ngFor="let marker of markers"
+    #markerElem
+    *ngFor="let marker of parkingAreas"
     [position]="marker.position"
     [label]="marker.label"
     [title]="marker.title"
     [options]="marker.options"
-    (mapClick)= "test()">
+    (mapClick)= "openInfo(markerElem, marker.info)">
+
+    <map-info-window> <div [innerHTML]=infoContent></div> </map-info-window>
     
   </map-marker>
 </google-map>
