@@ -1,7 +1,7 @@
 <google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options">
 
     <map-marker
-    *ngFor="let marker of markers"
+    *ngFor="let marker of park"
     [position]="marker.position"
     [label]="marker.label"
     [title]="marker.title"
