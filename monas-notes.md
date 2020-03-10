@@ -35,3 +35,9 @@ Note that access to Transit in Paris and Lyon, France requires additional proces
 [On-Street Parking Rates](https://data.grandrapidsmi.gov/resource/sndu-g7h2.json)   
 
 [On-Street Parking Zones](https://data.grandrapidsmi.gov/resource/s2v3-jher.json)   
+
+[Fees in cents api](https://data.grandrapidsmi.gov/resource/pitz-92py.json?fee_in_cents=0)  
+**To filter the dataset to only return records containing a specified value for fee_in_cents simply add a URL  parameter to your URL with fee_in_cents as the key and your specified value.**   
+
+[paystation parker id](https://data.grandrapidsmi.gov/resource/pitz-92py.json?paystation_or_parker_id=226355654  )   
+**To filter the dataset to only return records containing a specified value for paystation_or_parker_id simply  add a URL parameter to your URL with paystation_or_parker_id as the key and your specified value.**  
