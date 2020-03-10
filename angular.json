@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GrDecoded"
+    }
+  },
+  "defaultProject": "GrDecoded",
+  "cli": {
+    "analytics": false
+  }
 }
