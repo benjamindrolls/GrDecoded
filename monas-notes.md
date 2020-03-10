@@ -51,4 +51,9 @@ Note that access to Transit in Paris and Lyon, France requires additional proces
 **The Google Maps Data layer provides a container for arbitrary geospatial data. You can use the Data layer to store your custom data, or to display GeoJSON data on a Google map.** 
 
 [Google Maps will now let users combine transit directions with biking and ride-sharing](https://www.theverge.com/2019/8/27/20835131/google-maps-combine-transit-biking-ride-sharing)
-**Google Maps is going multimodal. The navigation app announced the launch of a new feature today that pairs transit directions with biking and ride-sharing options so customers can get directions from point A to point B using a variety of transportation modes.**
+**Google Maps is going multimodal. The navigation app announced the launch of a new feature today that pairs transit directions with biking and ride-sharing options so customers can get directions from point A to point B using a variety of transportation modes.**  
+
+[Google Map  Directions API](https://developers.google.com/maps/documentation/directions/intro)  
+**The Directions API is a service that calculates directions between locations using an HTTP request.
+
+This video illustrates the use of the Directions API to help people find their way. The video includes advice on proxying the web service via your server when you're using the API in a mobile app, to protect your API key.**
