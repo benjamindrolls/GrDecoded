@@ -47,3 +47,5 @@ Note that access to Transit in Paris and Lyon, France requires additional proces
 
 [GTFS Realtime Overview](https://developers.google.com/transit/gtfs-realtime)  
 
+[Data Layer](https://developers.google.com/maps/documentation/javascript/datalayer) 
+**The Google Maps Data layer provides a container for arbitrary geospatial data. You can use the Data layer to store your custom data, or to display GeoJSON data on a Google map.** 
