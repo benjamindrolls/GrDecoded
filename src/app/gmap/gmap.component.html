@@ -6,7 +6,9 @@
     [label]="marker.label"
     [title]="marker.title"
     [options]="marker.options"
-    (mapClick)= "test()">
+    (mapClick)= "openInfo(markerElem, marker.info)">
+
+    <map-info-window> <div [innerHTML]=infoContent></div> </map-info-window>
     
   </map-marker>
 

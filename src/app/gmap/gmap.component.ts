@@ -11,13 +11,11 @@ import { VenuesService } from '../venues.service';
   styleUrls: ["./gmap.component.css"]
 })
 export class GmapComponent implements OnInit {
-
   park: Parking[];
-
   constructor(private service: ParkingMarkersService, public venue: VenuesService) { }
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
-  
+
   zoom = 15
   center: google.maps.LatLngLiteral
   options: google.maps.MapOptions = {
@@ -29,7 +27,8 @@ export class GmapComponent implements OnInit {
 
   }
 
-  infoContent = ''
+  infoContent = '<h1>hey testing</h1>'
+
 
 
   ngOnInit() {
@@ -37,6 +36,7 @@ export class GmapComponent implements OnInit {
         lat: 42.963220,
         lng:-85.667900
       }
+
       this.park = this.service.getMarkers();
       //venue for loop
     this.getVenue()
@@ -56,8 +56,10 @@ export class GmapComponent implements OnInit {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
 
-
-  test() {
-    console.log("hello")
+  openInfo(marker: MapMarker, content) {
+    this.infoContent = content
+    this.info.open(marker)
   }
+   
 }
+
