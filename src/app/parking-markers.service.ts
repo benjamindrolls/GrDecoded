@@ -72,8 +72,6 @@ export class ParkingMarkersService {
     
   ];
 
-}
-
   constructor() { }
 
   getMarkers(): Parking[] {
@@ -81,5 +79,7 @@ export class ParkingMarkersService {
   }
 
 }
+
+
 
   
