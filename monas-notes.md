@@ -69,4 +69,11 @@ This video illustrates the use of the Directions API to help people find their w
 [Google Directions Service](https://developers.google.com/maps/documentation/javascript/directions)  
 **You can calculate directions (using a variety of methods of transportation) by using the DirectionsService object. This object communicates with the Google Maps API Directions Service which receives direction requests and returns an efficient path. Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account. You may either handle these directions results yourself or use the DirectionsRenderer object to render these results.**
 
+## Google Places 
+
+[Place Photos](https://developers.google.com/places/web-service/photos)  
+[Place Details](https://developers.google.com/places/web-service/details)  //possible for resturant 
+
+
+## API encryption   
 [Git-crypt](https://buddy.works/guides/git-crypt?utm_source=newsletter&utm_medium=email&utm_campaign=ns_1120&utm_content=button)
