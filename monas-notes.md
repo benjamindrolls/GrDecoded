@@ -82,3 +82,5 @@ This video illustrates the use of the Directions API to help people find their w
 [Google Maps API Tutorial | Custom Marker Icon | Multiple Info Window](https://www.youtube.com/watch?v=Xptz0GQ2DO4)   
 ## API encryption   
 [Git-crypt](https://buddy.works/guides/git-crypt?utm_source=newsletter&utm_medium=email&utm_campaign=ns_1120&utm_content=button)
+
+[Google Maps Markers and Events](https://www.youtube.com/watch?v=kUVKzZ1NKX0)   
