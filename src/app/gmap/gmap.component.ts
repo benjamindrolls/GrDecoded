@@ -3,6 +3,8 @@ import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { VenuesService } from "../venues.service";
+import { request } from 'http';
+import { ok } from 'assert';
 
 @Component({
   selector: "app-gmap",
@@ -14,8 +16,9 @@ export class GmapComponent implements OnInit {
   constructor(
     private service: ParkingMarkersService,
     public venue: VenuesService
-  ) {}
-  @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
+  ) { }
+
+  @ViewChild(GoogleMap, { static: false }) map: google.maps.Map;
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
 
   zoom = 15;
@@ -271,7 +274,27 @@ export class GmapComponent implements OnInit {
     this.park = this.service.getMarkers();
     //venue for loop
     this.getVenue();
+
+    const locationCalculations = (origin, destination) => {
+      let directionService = new google.maps.DirectionsService(),
+        directionsDisplay = new google.maps.DirectionsRenderer(),
+        request = {
+          origin: origin,
+          destination: destination,
+          travelMode: 'DRIVING'
+        }
+      directionsDisplay.setMap(this.map);
+      directionService.route(request, (result, status) => {
+        if (status === 'OK') {
+          directionsDisplay.setDirections(result)
+        }
+      })
+    }
+
+
   }
+
+
 
   getVenue() {
     this.venue.venues;
