@@ -1,10 +1,8 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild, Input } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { VenuesService } from "../venues.service";
-import { request } from 'http';
-import { ok } from 'assert';
 
 @Component({
   selector: "app-gmap",
@@ -17,7 +15,6 @@ export class GmapComponent implements OnInit {
     private service: ParkingMarkersService,
     public venue: VenuesService
   ) { }
-
   @ViewChild(GoogleMap, { static: false }) map: google.maps.Map;
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
 
@@ -264,8 +261,8 @@ export class GmapComponent implements OnInit {
   };
 
   infoContent = "";
-
   ngOnInit() {
+    let Input = <HTMLInputElement>document.getElementById('markerElem')
     this.center = {
       lat: 42.96322,
       lng: -85.6679
@@ -274,14 +271,20 @@ export class GmapComponent implements OnInit {
     this.park = this.service.getMarkers();
     //venue for loop
     this.getVenue();
+    
+    let autocomplete = new google.maps.places.Autocomplete(Input);
+    autocomplete.bindTo('bounds', this.map);
+    autocomplete.addListener('place_changed', () => {
+      const place = autocomplete.getPlace();
+    });
 
-    const locationCalculations = (origin, destination) => {
+    let locationCalculations = (origin, destination) => {
       let directionService = new google.maps.DirectionsService(),
         directionsDisplay = new google.maps.DirectionsRenderer(),
         request = {
           origin: origin,
           destination: destination,
-          travelMode: 'DRIVING'
+          travelMode: google.maps.TravelMode['DRIVING']
         }
       directionsDisplay.setMap(this.map);
       directionService.route(request, (result, status) => {
@@ -290,7 +293,6 @@ export class GmapComponent implements OnInit {
         }
       })
     }
-
 
   }
 
