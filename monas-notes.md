@@ -76,5 +76,9 @@ This video illustrates the use of the Directions API to help people find their w
 
 [Place Data Fields](https://developers.google.com/places/web-service/place-data-fields)    
 
+## Map info 
+
+[Google Map - Change Marker Icon & Add Info Window Popup - 4](https://www.youtube.com/watch?v=b6aAh29CGwg)  
+[Google Maps API Tutorial | Custom Marker Icon | Multiple Info Window](https://www.youtube.com/watch?v=Xptz0GQ2DO4)   
 ## API encryption   
 [Git-crypt](https://buddy.works/guides/git-crypt?utm_source=newsletter&utm_medium=email&utm_campaign=ns_1120&utm_content=button)
