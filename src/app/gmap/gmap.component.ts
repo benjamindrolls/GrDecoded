@@ -289,4 +289,5 @@ export class GmapComponent implements OnInit {
     this.infoContent = content;
     this.info.open(marker);
   }
+  
 }
