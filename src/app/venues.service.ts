@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+// import { MapMarker, info, infoContent } from '../app/gmap/gmap.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VenuesService {
-  
+
+ 
     starIcon = 'http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png'
     venues = [
       {
@@ -112,6 +114,17 @@ export class VenuesService {
         icon: this.starIcon
       }
     ];
+
+    // info = this.venues;
+    // infoContent = this.venues;
+
+
+
+//Possible info popup??
+    // openInfo(marker: MapMarker, content) {
+    //   this.infoContent = content;
+    //   this.info.open(marker);
+    // }
   
   constructor() { }
  
