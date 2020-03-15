@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-// import { MapMarker, info, infoContent } from '../app/gmap/gmap.component';
+import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 
 @Injectable({
   providedIn: 'root'
@@ -115,19 +115,15 @@ export class VenuesService {
       }
     ];
 
-    // info = this.venues;
-    // infoContent = this.venues;
-
-
-
-//Possible info popup??
-    // openInfo(marker: MapMarker, content) {
-    //   this.infoContent = content;
-    //   this.info.open(marker);
-    // }
+    info = this.venues;
+    venueContent = this.venues;
   
   constructor() { }
  
-
+//Possible info popup??
+// openInfo(marker: MapMarker, content) {
+//   this.venueContent = content;
+//   this.info.open(marker);
+// }
 
 }
