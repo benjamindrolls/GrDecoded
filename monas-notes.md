@@ -1,5 +1,13 @@
 ## Mona's notes and issues
 
+found where the hey testing is coming from
+
+parking-api.service.ts  
+
+`export class ParkingMarkersService {
+  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
+  infoContent = '<h1>hey testing</h1>`  
+
 ### TODO:
 Map Api
 Github Branches 
