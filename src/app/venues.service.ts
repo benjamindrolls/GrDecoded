@@ -21,7 +21,8 @@ export class VenuesService {
         options: {
           options: {
           icon: this.starIcon,
-        } 
+        },
+        
         } 
       },
       {
@@ -35,7 +36,8 @@ export class VenuesService {
         Site: "https://www.20monroelive.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "Van Andel Arena",
@@ -48,7 +50,8 @@ export class VenuesService {
         Site:"https://www.vanandelarena.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "The Pyramid Scheme",
@@ -61,7 +64,8 @@ export class VenuesService {
         Site:"https://pyramidschemebar.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "The Intersection",
@@ -74,7 +78,8 @@ export class VenuesService {
         Site:"https://sectionlive.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "The Listening Room",
@@ -87,7 +92,8 @@ export class VenuesService {
         Site:"https://listeningroomgr.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+         
       },
       {
         Name: "Grand Rapids Symphony",
@@ -100,7 +106,8 @@ export class VenuesService {
         Site:"https://www.grsymphony.org/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "Meijer Gardens",
@@ -111,19 +118,23 @@ export class VenuesService {
         E2:["Tuesday Evening Music Club", "Tues July 7th", "7PM"],
         Link2:"https://www.meijergardens.org/calendar/tuesday-evening-music-club/",
         Site:"https://www.meijergardens.org/attractions/amphitheater-garden/",
-        icon: this.starIcon
+        options: {
+          icon: this.starIcon,
+        },
+         
       }
     ];
 
-    info = this.venues;
-    venueContent = this.venues;
+    info = "<p>{this.venue}</p>";
+    venueContent = "<p>{this.venue}</p>";
+    open = false;
   
   constructor() { }
  
 //Possible info popup??
-// openInfo(marker: MapMarker, content) {
-//   this.venueContent = content;
-//   this.info.open(marker);
-// }
+openInfo(marker: MapMarker, content) {
+  this.venueContent = content;
+  this.info.open(marker);
+}
 
 }

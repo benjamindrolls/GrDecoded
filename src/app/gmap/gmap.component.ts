@@ -272,7 +272,7 @@ export class GmapComponent implements OnInit {
     //venue for loop
     this.getVenue();
 
-    
+
   }
 
   getVenue() {
