@@ -260,7 +260,7 @@ export class GmapComponent implements OnInit {
     ]
   };
 
-  infoContent = "<h1>hey testing</h1>";
+  infoContent = "";
 
   ngOnInit() {
     this.center = {
@@ -292,8 +292,5 @@ export class GmapComponent implements OnInit {
     this.infoContent = content;
     this.info.open(marker);
   }
-
-
-
 
 }
