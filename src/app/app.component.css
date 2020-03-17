@@ -9,7 +9,7 @@ h1 {
 }
 
 footer {
-    background-color: silver;
+    background-color: #B9D3C2;
     text-align: center;
 }
 
@@ -23,15 +23,25 @@ footer {
     border-radius: 50%;
   }
   .fa-facebook {
-    background: #3B5998;
+    background: #E98D58;
     color: white;
   }
   .fa-instagram {
-    background: #125688;
+    background: #F88181;
     color: white;
   }
   .fa-twitter {
-    background: #55ACEE;
+    background: #A5B076;
     color: white;
   }
   
+  .logo{
+    width: 45%;
+    padding-left: 5%;
+   
+  }
+
+  header{
+    background-color: #B9D3C2;
+
+  }
