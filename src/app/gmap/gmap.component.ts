@@ -271,6 +271,8 @@ export class GmapComponent implements OnInit {
     this.park = this.service.getMarkers();
     //venue for loop
     this.getVenue();
+
+
   }
 
   getVenue() {
@@ -285,9 +287,10 @@ export class GmapComponent implements OnInit {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
 
+//opening info content
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
     this.info.open(marker);
   }
-  
+
 }
