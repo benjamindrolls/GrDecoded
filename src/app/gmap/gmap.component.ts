@@ -269,7 +269,7 @@ export class GmapComponent implements OnInit {
         ]
       }
     ]
-  };
+  };//--End of styles
 
  
 
@@ -280,10 +280,13 @@ export class GmapComponent implements OnInit {
       lng: -85.6679
     };
 
+  //Call Parking Markers
     this.park = this.pService.getMarkers();
     
+  //Call Venue Markers
     this.venue=  this.vService.getVenue();
-  }
+
+  }//---end of Initialization
 
 
   zoomIn() {
@@ -300,4 +303,4 @@ export class GmapComponent implements OnInit {
     console.log('info opened');
   }
   
-}
+}//--End of Export

@@ -8,10 +8,11 @@ let starIcon = 'http://maps.google.com/mapfiles/kml/paddle/';
   providedIn: 'root'
 })
 export class VenuesService {
-  
+
+//TESTING INFO WINDOW CONTENT DELETE
   infoContent = 'I AM A VENUE AHHHHHHH'
 
-  //Venue Information Array  
+  //Venue Information Array {{MAKE FUNCTION TO FILL IN INFORMATION TO INFO WINDOW}} 
     venues: Venue[] = [
       {
         Name: "DeVos Performance Hall",
@@ -125,7 +126,7 @@ export class VenuesService {
           icon: starIcon + 'ylw-stars.png'
         }
       }
-    ];
+    ];//--End Of Venue Array
   
   constructor() { }
  
@@ -134,4 +135,4 @@ export class VenuesService {
     return this.venues;
   }
 
-}
+}//--End of Venue Service
