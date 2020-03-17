@@ -285,6 +285,8 @@ export class GmapComponent implements OnInit {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
 
+  //Jordan was haing issues with this 
+  //Ben states that we need to add a infoContent just need to figure out where to add it
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
     this.info.open(marker);
