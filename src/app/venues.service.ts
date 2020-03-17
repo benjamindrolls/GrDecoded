@@ -125,16 +125,7 @@ export class VenuesService {
       }
     ];
 
-    info = "<p>{this.venue}</p>";
-    venueContent = "<p>{this.venue}</p>";
-    open = false;
   
   constructor() { }
  
-//Possible info popup??
-openInfo(marker: MapMarker, content) {
-  this.venueContent = content;
-  this.info.open(marker);
-}
-
 }

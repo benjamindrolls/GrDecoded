@@ -21,8 +21,9 @@
     *ngFor="let hotSpot of venue.venues"
     [position]="hotSpot.position"
     [options]="hotSpot.options"
-    (mapClick)="openInfo(markerElem, marker.info)"
-  >
+    (mapClick)="getStuff(markerElem, marker.stuff)"
+    >
+  
     <map-info-window><div [innerHTML]="venueContent"></div></map-info-window>
   </map-marker>
 </google-map>
