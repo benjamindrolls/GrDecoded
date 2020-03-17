@@ -1,16 +1,20 @@
 import { Injectable, ViewChild } from '@angular/core';
 import { Parking } from './parking';
-import { MapInfoWindow } from "@angular/google-maps";
 
 
+//Marker for Parking Icon
 let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ParkingMarkersService {
-  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
-  infoContent = '<h1>hey testing</h1>'
 
+//TESTING INFO WINDOW CONTENT DELETE
+  infoContent = 'PARK HERE NOW!'
+
+
+  //Parking Information Array {{MAKE FUNCTION TO INPUT PARKING RATES (or random rates with no api)}}
   park: Parking[] = [
     {
       position: new google.maps.LatLng(42.960337, -85.675730),
@@ -84,14 +88,15 @@ export class ParkingMarkersService {
       }
     },
 
-  ];
+  ];//--End Of Parking Array
 
 
   constructor() { };
 
+  //Function for compiling array for Gmap Component
   getMarkers(): Parking[] {
     return this.park;
   }
 
-}
+}//--End of Parking Service
 

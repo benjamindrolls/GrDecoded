@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
+import { Venue } from "../venue"
 import { VenuesService } from "../venues.service";
 
 @Component({
@@ -11,12 +12,20 @@ import { VenuesService } from "../venues.service";
 })
 export class GmapComponent implements OnInit {
   park: Parking[];
+  venue: Venue[] ;
+  infoContent: string;
   constructor(
-    private service: ParkingMarkersService,
-    public venue: VenuesService
+    private pService: ParkingMarkersService,
+    public vService: VenuesService
   ) {}
+
+//Decorator for Map
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
-  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
+
+//Decorator for Info Pop Ups
+  @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
+
+
 
   zoom = 15;
   center: google.maps.LatLngLiteral;
@@ -26,6 +35,8 @@ export class GmapComponent implements OnInit {
     disableDoubleClickZoom: true,
     maxZoom: 17,
     minZoom: 8,
+
+ //Map Custom Styles??
     styles: [
       {
         elementType: "geometry",
@@ -260,22 +271,20 @@ export class GmapComponent implements OnInit {
     ]
   };
 
-  infoContent = "";
+ 
 
+  //Sets Starting Map location Over GR
   ngOnInit() {
     this.center = {
       lat: 42.96322,
       lng: -85.6679
     };
 
-    this.park = this.service.getMarkers();
-    //venue for loop
-    this.getVenue();
+    this.park = this.pService.getMarkers();
+    
+    this.venue=  this.vService.getVenue();
   }
 
-  getVenue() {
-    this.venue.venues;
-  }
 
   zoomIn() {
     if (this.zoom < this.options.maxZoom) this.zoom++;
@@ -287,7 +296,8 @@ export class GmapComponent implements OnInit {
 
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
-    this.info.open(marker);
+    this.infoWindow.open(marker);
+    console.log('info opened');
   }
   
 }

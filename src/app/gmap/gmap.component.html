@@ -1,22 +1,18 @@
 <google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options">
 
-    <map-marker
-    #markerElem
-    *ngFor="let marker of park"
-    [position]="marker.position"
-    [label]="marker.label"
-    [title]="marker.title"
-    [options]="marker.options"
-    (mapClick)= "openInfo(markerElem, marker.info)">
+  <map-marker #markerElem *ngFor="let marker of park, let i = index" [position]="marker.position" [label]="marker.label"
+    [title]="marker.title" [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)">
 
-    <map-info-window> <div [innerHTML]=infoContent></div> </map-info-window>
-    
+    <map-info-window>
+      <div [innerHTML]=infoContent></div>
+    </map-info-window>
+
   </map-marker>
 
-  <map-marker *ngFor="let hotSpot of venue.venues"
-  [position]="hotSpot.position"
-  [options]="hotSpot.options"
-  >
-    
+  <map-marker #markerElem *ngFor="let marker of venue, let i = index" [position]="marker.position"
+    [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)">
+    <map-info-window>
+      <div [innerHTML]=infoContent></div>
+    </map-info-window>
   </map-marker>
 </google-map>
