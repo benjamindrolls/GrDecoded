@@ -6,7 +6,9 @@ import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 })
 export class VenuesService {
 
- 
+  infoContent = ""
+  
+
     starIcon = 'http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png'
     venues = [
       {

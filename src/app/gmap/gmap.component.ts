@@ -3,6 +3,8 @@ import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { VenuesService } from "../venues.service";
+import { DirectionsService } from '../directions.service';
+import { ParkingAPIService } from '../parking-api.service';
 
 @Component({
   selector: "app-gmap",
@@ -13,10 +15,13 @@ export class GmapComponent implements OnInit {
   park: Parking[];
   constructor(
     private service: ParkingMarkersService,
-    public venue: VenuesService
-  ) {}
+    public venue: VenuesService,
+    private direction: DirectionsService,
+    public parking: ParkingAPIService
+  ) { }
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
+
 
   zoom = 15;
   center: google.maps.LatLngLiteral;
@@ -287,7 +292,26 @@ export class GmapComponent implements OnInit {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
 
+
+  setDirections() {
+    let directionService = new google.maps.DirectionsService();
+    let DirectionsRenderer = new google.maps.DirectionsRenderer();
+    DirectionsRenderer.setMap(this.map._googleMap);
+    let request = {
+      origin: { lat: 42.961518, lng: -85.674047 },
+      destination: { lat:42.964024, lng:-85.670190 },
+      travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionService.route(request, function (result, status) {
+      if (status === "OK") {
+        DirectionsRenderer.setDirections(result)
+      }
+    })
+  }
+
+
 //opening info content
+
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
     this.info.open(marker);
