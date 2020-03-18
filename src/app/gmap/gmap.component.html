@@ -1,4 +1,5 @@
 
+
  <google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options" id="map">
 
     <map-marker #markerElem *ngFor="let marker of park" [position]="marker.position" [label]="marker.label"
@@ -11,7 +12,14 @@
 
     </map-marker>
 
-    <map-marker *ngFor="let hotSpot of venue.venues" [position]="hotSpot.position" [options]="hotSpot.options">
-
-    </map-marker>
+    <map-marker
+    *ngFor="let hotSpot of venue.venues"
+    [position]="hotSpot.position"
+    [options]="hotSpot.options"
+    (mapClick)="getStuff(markerElem, marker.stuff)"
+    >
+  
+    <map-info-window><div [innerHTML]="venueContent"></div></map-info-window>
+  </map-marker>
   </google-map>
+

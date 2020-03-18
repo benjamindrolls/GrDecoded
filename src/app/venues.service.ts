@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 
 @Injectable({
   providedIn: 'root'
 })
 export class VenuesService {
+
   infoContent = ""
   
+
     starIcon = 'http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png'
     venues = [
       {
@@ -20,7 +23,8 @@ export class VenuesService {
         options: {
           options: {
           icon: this.starIcon,
-        } 
+        },
+        
         } 
       },
       {
@@ -34,7 +38,8 @@ export class VenuesService {
         Site: "https://www.20monroelive.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "Van Andel Arena",
@@ -47,7 +52,8 @@ export class VenuesService {
         Site:"https://www.vanandelarena.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "The Pyramid Scheme",
@@ -60,7 +66,8 @@ export class VenuesService {
         Site:"https://pyramidschemebar.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "The Intersection",
@@ -73,7 +80,8 @@ export class VenuesService {
         Site:"https://sectionlive.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "The Listening Room",
@@ -86,7 +94,8 @@ export class VenuesService {
         Site:"https://listeningroomgr.com/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+         
       },
       {
         Name: "Grand Rapids Symphony",
@@ -99,7 +108,8 @@ export class VenuesService {
         Site:"https://www.grsymphony.org/",
         options: {
           icon: this.starIcon,
-        } 
+        },
+        
       },
       {
         Name: "Meijer Gardens",
@@ -110,12 +120,14 @@ export class VenuesService {
         E2:["Tuesday Evening Music Club", "Tues July 7th", "7PM"],
         Link2:"https://www.meijergardens.org/calendar/tuesday-evening-music-club/",
         Site:"https://www.meijergardens.org/attractions/amphitheater-garden/",
-        icon: this.starIcon
+        options: {
+          icon: this.starIcon,
+        },
+         
       }
     ];
+
   
   constructor() { }
  
-
-
 }

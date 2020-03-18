@@ -277,6 +277,7 @@ export class GmapComponent implements OnInit {
     //venue for loop
     this.getVenue();
 
+
   }
 
   getVenue() {
@@ -290,6 +291,7 @@ export class GmapComponent implements OnInit {
   zoomOut() {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
+
 
   setDirections() {
     let directionService = new google.maps.DirectionsService();
@@ -307,8 +309,12 @@ export class GmapComponent implements OnInit {
     })
   }
 
+
+//opening info content
+
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
     this.info.open(marker);
   }
+
 }
