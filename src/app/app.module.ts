@@ -7,6 +7,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { GmapComponent } from './gmap/gmap.component';
 import { ParkingAPIComponent } from './parking-api/parking-api.component';
 import { VenuesComponent } from './venues/venues.component';
+import { MapDirectionsComponent } from './map-directions/map-directions.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { VenuesComponent } from './venues/venues.component';
     GmapComponent,
     ParkingAPIComponent,
     VenuesComponent,
+    MapDirectionsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
