@@ -1,8 +1,10 @@
-import { Component, OnInit, ViewChild, Input } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { VenuesService } from "../venues.service";
+import { DirectionsService } from '../directions.service';
+import { ParkingAPIService } from '../parking-api.service';
 
 @Component({
   selector: "app-gmap",
@@ -13,10 +15,13 @@ export class GmapComponent implements OnInit {
   park: Parking[];
   constructor(
     private service: ParkingMarkersService,
-    public venue: VenuesService
+    public venue: VenuesService,
+    private direction: DirectionsService,
+    public parking: ParkingAPIService
   ) { }
-  @ViewChild(GoogleMap, { static: false }) map: google.maps.Map;
+  @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
+
 
   zoom = 15;
   center: google.maps.LatLngLiteral;
@@ -261,8 +266,8 @@ export class GmapComponent implements OnInit {
   };
 
   infoContent = "";
+
   ngOnInit() {
-    let Input = <HTMLInputElement>document.getElementById('markerElem')
     this.center = {
       lat: 42.96322,
       lng: -85.6679
@@ -271,32 +276,8 @@ export class GmapComponent implements OnInit {
     this.park = this.service.getMarkers();
     //venue for loop
     this.getVenue();
-    
-    let autocomplete = new google.maps.places.Autocomplete(Input);
-    autocomplete.bindTo('bounds', this.map);
-    autocomplete.addListener('place_changed', () => {
-      const place = autocomplete.getPlace();
-    });
-
-    let locationCalculations = (origin, destination) => {
-      let directionService = new google.maps.DirectionsService(),
-        directionsDisplay = new google.maps.DirectionsRenderer(),
-        request = {
-          origin: origin,
-          destination: destination,
-          travelMode: google.maps.TravelMode['DRIVING']
-        }
-      directionsDisplay.setMap(this.map);
-      directionService.route(request, (result, status) => {
-        if (status === 'OK') {
-          directionsDisplay.setDirections(result)
-        }
-      })
-    }
 
   }
-
-
 
   getVenue() {
     this.venue.venues;
@@ -308,6 +289,22 @@ export class GmapComponent implements OnInit {
 
   zoomOut() {
     if (this.zoom > this.options.minZoom) this.zoom--;
+  }
+
+  setDirections() {
+    let directionService = new google.maps.DirectionsService();
+    let DirectionsRenderer = new google.maps.DirectionsRenderer();
+    DirectionsRenderer.setMap(this.map._googleMap);
+    let request = {
+      origin: { lat: 42.961518, lng: -85.674047 },
+      destination: { lat:42.964024, lng:-85.670190 },
+      travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionService.route(request, function (result, status) {
+      if (status === "OK") {
+        DirectionsRenderer.setDirections(result)
+      }
+    })
   }
 
   openInfo(marker: MapMarker, content) {

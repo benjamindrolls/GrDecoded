@@ -86,7 +86,11 @@ export class ParkingMarkersService {
 
   ];
 
-
+  // navigator.geolocation.getCurrentPosition(function(position) {
+  //   //   let pos = {
+  //   //     lat: position.coords.latitude,
+  //   //     lng: position.coords.longitude
+  //   //   }
   constructor() { };
 
   getMarkers(): Parking[] {

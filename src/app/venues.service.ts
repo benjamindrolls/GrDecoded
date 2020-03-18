@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class VenuesService {
+  infoContent = ""
   
     starIcon = 'http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png'
     venues = [
