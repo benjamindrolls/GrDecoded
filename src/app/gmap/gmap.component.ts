@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
+import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
-// import { DirectionsService } from '../directions.service';
 import { ParkingAPIService } from '../parking-api.service';
 
 @Component({
@@ -13,14 +13,20 @@ import { ParkingAPIService } from '../parking-api.service';
 })
 export class GmapComponent implements OnInit {
   park: Parking[];
+  venue: Venue[];
+  infoContent: string;
   constructor(
-    private service: ParkingMarkersService,
-    public venue: VenuesService,
+    private pService: ParkingMarkersService,
+    public vService: VenuesService,
     // private direction: DirectionsService,
     public parking: ParkingAPIService
   ) { }
+
+  //Decorator for Map
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
-  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
+
+  //Decorator for Info Pop Ups
+  @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
 
 
   zoom = 15;
@@ -263,26 +269,24 @@ export class GmapComponent implements OnInit {
         ]
       }
     ]
-  };
+  };//--End of Styles
 
-  infoContent = "";
-
+//Sets Starting Map Location Over GR
   ngOnInit() {
     this.center = {
       lat: 42.96322,
       lng: -85.6679
     };
 
-    this.park = this.service.getMarkers();
-    //venue for loop
-    this.getVenue();
+    //Call Parking Markers
+    this.park = this.pService.getMarkers();
+  
+    //Call Venue Markers
+    this.venue = this.vService.getVenue();
 
 
-  }
+  }//--End of Initialization
 
-  getVenue() {
-    this.venue.venues;
-  }
 
   zoomIn() {
     if (this.zoom < this.options.maxZoom) this.zoom++;
@@ -312,9 +316,10 @@ export class GmapComponent implements OnInit {
 
 //opening info content
 
-  openInfo(marker: MapMarker, content) {
-    this.infoContent = content;
-    this.info.open(marker);
-  }
-
+openInfo(marker: MapMarker, content) {
+  this.infoContent = content;
+  this.infoWindow.open(marker);
+  console.log('info opened');
 }
+
+}//--End of Export 
