@@ -3,7 +3,7 @@ import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { VenuesService } from "../venues.service";
-import { DirectionsService } from '../directions.service';
+// import { DirectionsService } from '../directions.service';
 import { ParkingAPIService } from '../parking-api.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class GmapComponent implements OnInit {
   constructor(
     private service: ParkingMarkersService,
     public venue: VenuesService,
-    private direction: DirectionsService,
+    // private direction: DirectionsService,
     public parking: ParkingAPIService
   ) { }
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
