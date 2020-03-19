@@ -96,3 +96,6 @@ This video illustrates the use of the Directions API to help people find their w
 [Google Maps Markers and Events](https://www.youtube.com/watch?v=kUVKzZ1NKX0)   
 
 [Display Location Image Using Google Places Photo API](https://www.youtube.com/watch?v=pcKgiN5FRj4)  
+[Git-crypt](https://buddy.works/guides/git-crypt?utm_source=newsletter&utm_medium=email&utm_campaign=ns_1120&utm_content=button)
+
+[Deploying angular 2 app to Github](https://alligator.io/angular/deploying-angular-app-github-pages/)
