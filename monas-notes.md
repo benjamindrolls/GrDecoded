@@ -69,6 +69,33 @@ This video illustrates the use of the Directions API to help people find their w
 [Google Directions Service](https://developers.google.com/maps/documentation/javascript/directions)  
 **You can calculate directions (using a variety of methods of transportation) by using the DirectionsService object. This object communicates with the Google Maps API Directions Service which receives direction requests and returns an efficient path. Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account. You may either handle these directions results yourself or use the DirectionsRenderer object to render these results.**
 
+
+## Encryption
+
+[Git-crypt](https://buddy.works/guides/git-crypt?utm_source=newsletter&utm_medium=email&utm_campaign=ns_1120&utm_content=button)
+
+[Hiding and Securing Your API Keys](https://nordicapis.com/hiding-and-securing-your-api-keys/)  
+
+[Best practices for building secure API Keys](https://www.freecodecamp.org/news/best-practices-for-building-api-keys-97c26eabfea9/)  
+
+[How to secure a Google Maps API Key](https://yoast.com/help/remove-google-maps-api-restrictions/)  
+## Google Places 
+
+[Place Photos](https://developers.google.com/places/web-service/photos)  
+[Place Details](https://developers.google.com/places/web-service/details)  //possible for resturant 
+
+[Place Data Fields](https://developers.google.com/places/web-service/place-data-fields)    
+
+## Map info 
+
+[Google Map - Change Marker Icon & Add Info Window Popup - 4](https://www.youtube.com/watch?v=b6aAh29CGwg)  
+[Google Maps API Tutorial | Custom Marker Icon | Multiple Info Window](https://www.youtube.com/watch?v=Xptz0GQ2DO4)   
+## API encryption   
+[Git-crypt](https://buddy.works/guides/git-crypt?utm_source=newsletter&utm_medium=email&utm_campaign=ns_1120&utm_content=button)
+
+[Google Maps Markers and Events](https://www.youtube.com/watch?v=kUVKzZ1NKX0)   
+
+[Display Location Image Using Google Places Photo API](https://www.youtube.com/watch?v=pcKgiN5FRj4)  
 [Git-crypt](https://buddy.works/guides/git-crypt?utm_source=newsletter&utm_medium=email&utm_campaign=ns_1120&utm_content=button)
 
 [Deploying angular 2 app to Github](https://alligator.io/angular/deploying-angular-app-github-pages/)
