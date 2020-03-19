@@ -15,7 +15,6 @@ import { VenuesComponent } from './venues/venues.component';
     GmapComponent,
     ParkingAPIComponent,
     VenuesComponent,
-  
   ],
   imports: [
     BrowserModule,
