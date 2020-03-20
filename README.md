@@ -1,4 +1,17 @@
-# GrDecoded
+# **DestinationGR**
+
+# *TEAM Members*
+## *Spencer Deering*
+## *Jordan Gaza*
+## *Benjamin Rolls*
+## *Ramona Saintandre*
+## *Kevin Marusek*  
+
+
+
+
+
+## ***Project specification on how to run the project*** 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
