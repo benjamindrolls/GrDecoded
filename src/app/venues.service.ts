@@ -9,7 +9,7 @@ let starIcon = "http://maps.google.com/mapfiles/kml/paddle/";
 })
 export class VenuesService {
   //TESTING INFO WINDOW CONTENT DELETE
-  infoContent = "I AM A VENUE AHHHHHHH";
+  infoContent = "Here";
 
   //Venue Information Array {{MAKE FUNCTION TO FILL IN INFORMATION TO INFO WINDOW}}
   venues: Venue[] = [
@@ -146,9 +146,9 @@ export class VenuesService {
         venue.Name,
         venue.Address,
         venue.E1,
-        venue.Link1,
+        // venue.Link1,
         venue.E2,
-        venue.Link2,
+        // venue.Link2,
         venue.Site
       ];
     }
