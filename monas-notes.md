@@ -1,5 +1,18 @@
 ## Mona's notes and issues
 
+found where the hey testing is coming from
+
+parking-api.service.ts  
+
+`export class ParkingMarkersService {
+  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
+  infoContent = '<h1>hey testing</h1>`  
+
+   //Jordan was haing issues with this 
+  //Ben states that we need to add a infoContent just need to figure out where to add it
+  gmap.components.ts
+  
+
 ### TODO:
 Map Api
 Github Branches 
