@@ -10,7 +10,7 @@ let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 })
 export class ParkingMarkersService {
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
-  infoContent = '<h1>hey testing</h1>' + '<div>hey there {Parking.title}</div>'
+  infoContent = '<h1>hey testing</h1>'
   park: Parking[] = [
     {
       position: new google.maps.LatLng(42.954982, -85.669240),

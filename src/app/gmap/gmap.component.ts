@@ -13,6 +13,7 @@ import { ParkingAPIService } from '../parking-api.service';
 })
 export class GmapComponent implements OnInit {
   park: Parking[];
+  position: Parking
   constructor(
     private service: ParkingMarkersService,
     public venue: VenuesService,
@@ -293,13 +294,13 @@ export class GmapComponent implements OnInit {
   }
 
 
-  setDirections() {
+  setDirections(position) {
     let directionService = new google.maps.DirectionsService();
     let DirectionsRenderer = new google.maps.DirectionsRenderer();
     DirectionsRenderer.setMap(this.map._googleMap);
     let request = {
-      origin: { lat: 42.961518, lng: -85.674047 },
-      destination: { lat:42.964024, lng:-85.670190 },
+      origin: { lat: 42.958515, lng: -85.677476 },
+      destination: position,
       travelMode: google.maps.TravelMode.DRIVING
     };
     directionService.route(request, function (result, status) {
@@ -310,7 +311,7 @@ export class GmapComponent implements OnInit {
   }
 
 
-//opening info content
+  //opening info content
 
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
