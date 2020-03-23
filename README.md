@@ -8,6 +8,37 @@
 ## *Kevin Marusek*  
 
 
+ 
+
+What problem are we trying to solve? 
+
+Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan. 
+
+Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that Grand Rapids has to offer. 
+
+We would like to make it even easier for the average person to experience Grand Rapids by providing a useful tool to navigate the city. 
+
+Our project seeks to grant access to a map outlining the variety of parking options and venue locations making it easier than ever to traverse Grand Rapids 
+
+Why is this an important problem to solve? 
+
+Team Destination Grand Rapids is excited to work on this project because it is something we can solve. 
+
+Creating an easier experience for people looking to visit Grand Rapids not only provides on opportunity to boost tourism but allows those of us living here to support the city we love. 
+
+What City data have we used and what technologies we used? 
+
+We utilized the city parking data, displaying parking structures over a google map display 
+
+Upon clicking each parking location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
+
+We have utilized HTML, CSS and JavaScript in an Angular framework for this project 
+
+Conclusion 
+
+Thank you for listening and please enjoy our presentation! 
+
+ 
 
 
 
