@@ -1,4 +1,5 @@
 # **DestinationGR**
+<img src = './src/assets/logo.jpg' alt = 'Logo Image'>
 
 # *TEAM Members* 
 ## *Spencer Deering* [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
