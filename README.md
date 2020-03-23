@@ -1,8 +1,8 @@
 
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
 
-# [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
-# *TEAM Members* 
+
+# *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
 ### *Spencer Deering*  [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
 ### *Jordan Gaza* [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
 ### *Benjamin Rolls* [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
@@ -12,7 +12,7 @@
 
  
 
- **What problem are we trying to solve?** 
+ # **What problem are we trying to solve?** 
 ***
 Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan. 
 
@@ -20,16 +20,16 @@ Numerous people travel from all over West Michigan weekly to experience the vari
 
 We would like to make it even easier for the average person to experience Grand Rapids by providing a useful tool to navigate the city. 
 
-Our project seeks to grant access to a map outlining the variety of parking options and venue locations making it easier than ever to traverse Grand Rapids 
+Our project seeks to grant access to a map outlining the variety of parking options and venue locations making it easier than ever to traverse Grand Rapids. 
 
-**Why is this an important problem to solve?**
+# **Why is this an important problem to solve?**
 ***
 ### *Team DestinationGR*  
 is excited to work on this project because it is something we can solve. 
 
 Creating an easier experience for people looking to visit Grand Rapids not only provides on opportunity to boost tourism but allows those of us living here to support the city we love. 
 
-**What City data have we used and what technologies we used?** 
+# **What City data have we used and what technologies we used?** 
 ***
 We utilized the city parking data, displaying parking structures over a google map display 
 
@@ -39,7 +39,7 @@ We have utilized HTML, CSS and JavaScript in an Angular framework for this proje
 
 <!-- **Conclusion**  -->
 
-## ***Project specification on how to run the project*** 
+# ***Project specification on how to run the project*** 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
