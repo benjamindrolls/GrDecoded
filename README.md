@@ -1,6 +1,7 @@
-<!-- # **DestinationGR** -->
+
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
 
+# [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
 # *TEAM Members* 
 ### *Spencer Deering*  [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
 ### *Jordan Gaza* [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
