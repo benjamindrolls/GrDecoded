@@ -46,3 +46,25 @@ footer {
 
   }
   
+
+/*Desktop*/
+@media only screen and (min-width: 992px) {
+  .logo{
+    transform: scale(0.5, 0.5);
+    position: relative;
+    right: 0px;
+    width: 300px;
+    padding: 0.05px;
+    margin-top: -35px;
+  }
+
+  header{
+    height: 70px;
+    width: 100%;
+  }
+
+  footer{
+    height: 50px;
+  }
+
+}
