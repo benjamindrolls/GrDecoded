@@ -8,7 +8,6 @@ import { GmapComponent } from './gmap/gmap.component';
 import { ParkingAPIComponent } from './parking-api/parking-api.component';
 import { VenuesComponent } from './venues/venues.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
