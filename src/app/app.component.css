@@ -1,3 +1,13 @@
+.contain{
+  display: flex;
+}
+
+.menu {
+  padding-left: 110px;
+  margin: 30px;
+  align-items: flex-end;
+}
+
 h1 {
     font-family: 'Anton', sans-serif;
     background-color: silver;
@@ -11,6 +21,7 @@ h1 {
 footer {
     background-color: #B9D3C2;
     text-align: center;
+    width: 100%;
 }
 
 .fa {
@@ -38,12 +49,12 @@ footer {
   .logo{
     width: 45%;
     padding-left: 5%;
-   
+    display: flex;
   }
 
   header{
     background-color: #B9D3C2;
-
+    width: 100%;
   }
   
 
@@ -67,4 +78,15 @@ footer {
     height: 50px;
   }
 
+  .contain{
+    display: flex;   
+  }
+
+  .menu {
+    position: absolute;
+    padding-left: 88%;
+    padding-bottom: 30%;
+    margin: 20px;
+    align-items: flex-end;
+  }
 }
