@@ -1,5 +1,9 @@
-import { Injectable } from "@angular/core";
+import { Injectable, ViewChild } from '@angular/core';
 import { Venue } from "./venue";
+import { MapInfoWindow } from "@angular/google-maps";
+
+//imported ViewChild, and MapinfoWindow from parking-marker.service.ts to see if it would help with
+//formating no change, but it did not break either 
 
 //Marker for Venue Icon
 let starIcon = "http://maps.google.com/mapfiles/kml/paddle/";
@@ -8,6 +12,7 @@ let starIcon = "http://maps.google.com/mapfiles/kml/paddle/";
   providedIn: "root"
 })
 export class VenuesService {
+  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
   //TESTING INFO WINDOW CONTENT DELETE
   infoContent = "Here";
 

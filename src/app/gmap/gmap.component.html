@@ -4,7 +4,7 @@
     [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)">
 
     <map-info-window>
-      <div [innerHTML]=infoContent>{{ infoContent}}</div>
+      <div [innerHTML]=infoContent></div>
       <!-- <button (click)="setDirections()">get Directions</button> -->
     </map-info-window>
 
