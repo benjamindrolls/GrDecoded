@@ -10,6 +10,8 @@ let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 export class ParkingMarkersService {
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
   infoContent = '<h1>hey testing</h1>'
+// why is hey parking not poping up on all icons
+
   park: Parking[] = [
     {
       position: new google.maps.LatLng(42.954982, -85.669240),
@@ -167,11 +169,6 @@ export class ParkingMarkersService {
 
   ];
 
-  // navigator.geolocation.getCurrentPosition(function(position) {
-  //   //   let pos = {
-  //   //     lat: position.coords.latitude,
-  //   //     lng: position.coords.longitude
-  //   //   }
   constructor() { };
 
   getMarkers(): Parking[] {
