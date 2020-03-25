@@ -5,6 +5,8 @@ import { Parking } from "../parking";
 import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
 import { ParkingAPIService } from '../parking-api.service';
+import { Restaurant } from "../restaurant";
+import { RestaurantService } from "../restaurant.service";
 
 @Component({
   selector: "app-gmap",
@@ -15,11 +17,13 @@ export class GmapComponent implements OnInit {
   park: Parking[];
   venue: Venue[];
   infoContent: string;
+  restaurant: Restaurant[];
   constructor(
     private pService: ParkingMarkersService,
     public vService: VenuesService,
     // private direction: DirectionsService,
-    public parking: ParkingAPIService
+    public parking: ParkingAPIService,
+    public rService: RestaurantService
   ) { }
 
   //Decorator for Map
@@ -284,6 +288,9 @@ export class GmapComponent implements OnInit {
     //Call Venue Markers
     this.venue = this.vService.getVenue();
 
+    //Call Restaurant Markers
+    this.restaurant = this.rService.getRestaurant();
+
 
   }//--End of Initialization
 
@@ -295,16 +302,30 @@ export class GmapComponent implements OnInit {
   zoomOut() {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
+ 
+  coords: any;
+  venues: any;
+  setPosition(position) {
+    
+    this.coords = position
 
+  
+    return this.coords
+  }
+  setVenue(position){
+    this.venues = position
+
+    return this.venues
+  }
 
   setDirections() {
     let directionService = new google.maps.DirectionsService();
     let DirectionsRenderer = new google.maps.DirectionsRenderer();
     DirectionsRenderer.setMap(this.map._googleMap);
     let request = {
-      origin: { lat: 42.961518, lng: -85.674047 },
-      destination: { lat:42.964024, lng:-85.670190 },
-      travelMode: google.maps.TravelMode.DRIVING
+      origin: this.venues,
+      destination: this.coords,
+      travelMode: google.maps.TravelMode.WALKING
     };
     directionService.route(request, function (result, status) {
       if (status === "OK") {
@@ -314,7 +335,7 @@ export class GmapComponent implements OnInit {
   }
 
 
-//opening info content
+  //opening info content
 
 openInfo(marker: MapMarker, content) {
   this.infoContent = content;
