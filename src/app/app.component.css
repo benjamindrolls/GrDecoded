@@ -1,3 +1,14 @@
+.contain{
+  display: flex;
+}
+
+.menu {
+  padding-left: 110px;
+  margin: 30px;
+  align-items: flex-end;
+  
+}
+
 h1 {
     font-family: 'Anton', sans-serif;
     background-color: silver;
@@ -11,6 +22,7 @@ h1 {
 footer {
     background-color: #B9D3C2;
     text-align: center;
+    width: 100%;
 }
 
 .fa {
@@ -38,11 +50,45 @@ footer {
   .logo{
     width: 45%;
     padding-left: 5%;
-   
+    display: flex;
   }
 
   header{
     background-color: #B9D3C2;
-
+    width: 100%;
   }
   
+
+/*Desktop*/
+@media only screen and (min-width: 992px) {
+  .logo{
+    transform: scale(0.5, 0.5);
+    position: relative;
+    right: 0px;
+    width: 300px;
+    padding: 0.05px;
+    margin-top: -35px;
+  }
+
+  header{
+    height: 70px;
+    width: 100%;
+  }
+
+  footer{
+    height: 50px;
+  }
+
+  .contain{
+    display: flex;   
+  }
+
+  .menu {
+    position: absolute;
+    padding-left: 88%;
+    padding-bottom: 30%;
+    margin: 20px;
+    align-items: flex-end;
+   
+  }
+}
