@@ -18,7 +18,8 @@ import { VenuesComponent } from './venues/venues.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

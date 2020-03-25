@@ -2,8 +2,11 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
+import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
-import { ParkingAPIService } from "../parking-api.service";
+import { ParkingAPIService } from '../parking-api.service';
+import { Restaurant } from "../restaurant";
+import { RestaurantService } from "../restaurant.service";
 
 @Component({
   selector: "app-gmap",
@@ -12,13 +15,23 @@ import { ParkingAPIService } from "../parking-api.service";
 })
 export class GmapComponent implements OnInit {
   park: Parking[];
+  venue: Venue[];
+  infoContent: string;
+  restaurant: Restaurant[];
   constructor(
-    private service: ParkingMarkersService,
-    public venue: VenuesService,
-    private parking: ParkingAPIService
-  ) {}
+    private pService: ParkingMarkersService,
+    public vService: VenuesService,
+    // private direction: DirectionsService,
+    public parking: ParkingAPIService,
+    public rService: RestaurantService
+  ) { }
+
+  //Decorator for Map
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
-  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
+
+  //Decorator for Info Pop Ups
+  @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
+
 
   zoom = 15;
   center: google.maps.LatLngLiteral;
@@ -260,26 +273,27 @@ export class GmapComponent implements OnInit {
         ]
       }
     ]
-  };
+  };//--End of Styles
 
-  infoContent = "";
-
+//Sets Starting Map Location Over GR
   ngOnInit() {
     this.center = {
       lat: 42.96322,
       lng: -85.6679
     };
 
-  //console.log(this.parking.getParkingId())
+    //Call Parking Markers
+    this.park = this.pService.getMarkers();
+  
+    //Call Venue Markers
+    this.venue = this.vService.getVenue();
 
-    this.park = this.service.getMarkers();
-    //venue for loop
-    this.getVenue();
-  }
+    //Call Restaurant Markers
+    this.restaurant = this.rService.getRestaurant();
 
-  getVenue() {
-    this.venue.venues;
-  }
+
+  }//--End of Initialization
+
 
   zoomIn() {
     if (this.zoom < this.options.maxZoom) this.zoom++;
@@ -288,10 +302,45 @@ export class GmapComponent implements OnInit {
   zoomOut() {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
+ 
+  coords: any;
+  venues: any;
+  setPosition(position) {
+    
+    this.coords = position
 
-  openInfo(marker: MapMarker, content) {
-    this.infoContent = content;
-    this.info.open(marker);
-  }
   
+    return this.coords
+  }
+  setVenue(position){
+    this.venues = position
+
+    return this.venues
+  }
+
+  setDirections() {
+    let directionService = new google.maps.DirectionsService();
+    let DirectionsRenderer = new google.maps.DirectionsRenderer();
+    DirectionsRenderer.setMap(this.map._googleMap);
+    let request = {
+      origin: this.venues,
+      destination: this.coords,
+      travelMode: google.maps.TravelMode.WALKING
+    };
+    directionService.route(request, function (result, status) {
+      if (status === "OK") {
+        DirectionsRenderer.setDirections(result)
+      }
+    })
+  }
+
+
+  //opening info content
+
+openInfo(marker: MapMarker, content) {
+  this.infoContent = content;
+  this.infoWindow.open(marker);
+  console.log('info opened');
 }
+
+}//--End of Export 

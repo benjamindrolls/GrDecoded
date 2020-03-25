@@ -7,14 +7,14 @@ import { IParking } from './iparking';
 })
 export class ParkingAPIService {
 
-  private baseFilterUrl: string = "http://grand-rapids-proxy.herokuapp.com/proxy/resource/ykbs-97kp.json";
+  private baseFilterUrl: string = "https://grand-rapids-proxy.herokuapp.com/proxy/resource/nb67-knvp.json";
 
   constructor(private http: HttpClient) { }
 
-  // getFilteredData(category: IParking) {
-  //   return this.http.get(
-  //     `${this.baseFilterUrl}&category=${category.category}&difficulty=${category.difficulty}&type=multiple`
-  //   );
-  // }
+  getFilteredData(category: IParking) {
+    return this.http.get(
+      `${this.baseFilterUrl}&category=${category.lot_name}&difficulty=${category.count}&type=multiple`
+    );
+  }
 
 }
