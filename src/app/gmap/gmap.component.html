@@ -2,11 +2,11 @@
 
   <map-marker #markerElem *ngFor="let marker of park" [position]="marker.position" [label]="marker.label"
     [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)"
-    (mapClick)="setDirections(marker.position)">
+    (mapClick)="setPosition(marker.position)">
 
     <map-info-window>
       <div [innerHTML]=infoContent></div>
-      <!-- <button (click)="setDirections()">get Directions</button> -->
+      <button (click)="setDirections()">Get Directions</button>
     </map-info-window>
 
   </map-marker>

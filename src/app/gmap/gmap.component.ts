@@ -277,7 +277,12 @@ export class GmapComponent implements OnInit {
     this.park = this.service.getMarkers();
     //venue for loop
     this.getVenue();
-
+    let myLocation = navigator.geolocation.getCurrentPosition(position => {
+      this.center = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      }
+    })
 
   }
 
@@ -293,14 +298,22 @@ export class GmapComponent implements OnInit {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
 
+ 
+  coords: any;
+  setPosition(position) {
+    
+    this.coords = position
 
-  setDirections(position) {
+    return this.coords
+  }
+
+  setDirections() {
     let directionService = new google.maps.DirectionsService();
     let DirectionsRenderer = new google.maps.DirectionsRenderer();
     DirectionsRenderer.setMap(this.map._googleMap);
     let request = {
-      origin: { lat: 42.958515, lng: -85.677476 },
-      destination: position,
+      origin: {lat:42.954982, lng:-85.669240},
+      destination: this.coords,
       travelMode: google.maps.TravelMode.DRIVING
     };
     directionService.route(request, function (result, status) {

@@ -1,7 +1,6 @@
 import { Injectable, ViewChild } from '@angular/core';
 import { Parking } from './parking';
 import { MapInfoWindow } from "@angular/google-maps";
-import { Title } from '@angular/platform-browser';
 
 
 let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
