@@ -1,22 +1,24 @@
+<google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options" id="map">
 
+  <map-marker #markerElem *ngFor="let marker of park" [position]="marker.position" [label]="marker.label"
+    [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)"
+    (mapClick)="setPosition(marker.position)">
 
- <google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options" id="map">
+    <map-info-window>
+      <div [innerHTML]=infoContent></div>
+      <button (click)="setDirections()">Get Directions</button>
+    </map-info-window>
 
+  </map-marker>
   <!-- Parking Marker -->
     <map-marker #markerElem *ngFor="let marker of park" [position]="marker.position" [label]="marker.label"
       [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)">
-
-      <map-info-window>
-        <div [innerHTML]=infoContent></div>
-        <!-- <button (click)="setDirections()">get Directions</button> -->
-      </map-info-window>
-
     </map-marker>
   <!-- End Parking Marker -->
 
   <!-- Venue Marker -->
     <map-marker #markerElem *ngFor="let marker of venue, let i = index" [position]="marker.position"
-    [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)">
+    [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)" (mapClick)="setVenue(marker.position)">
 
     <map-info-window>
       <div [innerHTML]=infoContent></div>

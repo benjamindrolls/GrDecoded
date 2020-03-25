@@ -302,16 +302,30 @@ export class GmapComponent implements OnInit {
   zoomOut() {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
+ 
+  coords: any;
+  venues: any;
+  setPosition(position) {
+    
+    this.coords = position
 
+  
+    return this.coords
+  }
+  setVenue(position){
+    this.venues = position
+
+    return this.venues
+  }
 
   setDirections() {
     let directionService = new google.maps.DirectionsService();
     let DirectionsRenderer = new google.maps.DirectionsRenderer();
     DirectionsRenderer.setMap(this.map._googleMap);
     let request = {
-      origin: { lat: 42.961518, lng: -85.674047 },
-      destination: { lat:42.964024, lng:-85.670190 },
-      travelMode: google.maps.TravelMode.DRIVING
+      origin: this.venues,
+      destination: this.coords,
+      travelMode: google.maps.TravelMode.WALKING
     };
     directionService.route(request, function (result, status) {
       if (status === "OK") {
@@ -321,7 +335,7 @@ export class GmapComponent implements OnInit {
   }
 
 
-//opening info content
+  //opening info content
 
 openInfo(marker: MapMarker, content) {
   this.infoContent = content;
