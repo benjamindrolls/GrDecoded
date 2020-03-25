@@ -9,9 +9,14 @@
       <button (click)="setDirections()">Get Directions</button>
     </map-info-window>
 
-
   </map-marker>
+  <!-- Parking Marker -->
+    <map-marker #markerElem *ngFor="let marker of park" [position]="marker.position" [label]="marker.label"
+      [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)">
+    </map-marker>
+  <!-- End Parking Marker -->
 
+  <!-- Venue Marker -->
     <map-marker #markerElem *ngFor="let marker of venue, let i = index" [position]="marker.position"
     [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)" (mapClick)="setVenue(marker.position)">
 
@@ -20,4 +25,13 @@
     </map-info-window>
     
   </map-marker>
-</google-map>
+  <!-- End Venue Marker -->
+
+  <!-- Restaurant Marker-->
+  <map-marker #markerElem *ngFor="let marker of restaurant, let i = index"
+  [position]="marker.position" [options]="marker.options" (mapClick)="openInfo(markerElem, marker)">
+
+  </map-marker>
+  <!--End Restaurant Marker-->
+  </google-map>
+
