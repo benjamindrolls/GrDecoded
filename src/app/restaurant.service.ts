@@ -2,13 +2,13 @@ import { Injectable } from "@angular/core";
 import { Restaurant } from "./restaurant";
 
 //icon from google base - need to find a not-broken link
-let foodIcon = "http://maps.google.com/mapfiles/kml/paddle";
+let foodIcon = "http://maps.google.com/mapfiles/kml/paddle/";
 
 @Injectable({
   providedIn: "root"
 })
 
-//Restaurant array
+//Restaurants array
 export class RestaurantService {
   restaurants: Restaurant[] = [
     {
@@ -17,7 +17,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.963, -85.67064),
       site: "https://www.hopcat.com/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
     {
@@ -26,7 +26,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.961855, -85.669396),
       site: "https://www.stellasgr.com/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
     {
@@ -35,7 +35,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.96203, -85.668106),
       site: "https://rockwellrepublic.com/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
     {
@@ -44,7 +44,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.96309, -85.66521),
       site: "https://cottagebar.biz/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
     {
@@ -53,7 +53,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.965869, -85.673063),
       site: "http://www.zsbar.com/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
     {
@@ -62,7 +62,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.967330, -85.672012),
       site: "https://thechophousegrandrapids.com/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
     {
@@ -71,7 +71,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.963326, -85.669587),
       site: "https://www.sanchezbistro.com/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
     {
@@ -80,13 +80,14 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.962211, -85.673192),
       site: "https://bistrobellavita.com/",
       options: {
-        icon: foodIcon + "red-stars.png"
+        icon: foodIcon + "ltblu-stars.png"
       }
     },
   ];
 
   constructor() {}
 
+//Compiles array in gmap comp
   getRestaurant(): Restaurant[] {
     for (const restaurants of this.restaurants) {
         restaurants.name +
@@ -97,4 +98,5 @@ export class RestaurantService {
     }
     return this.restaurants;
   }
+
 }

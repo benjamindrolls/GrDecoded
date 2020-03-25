@@ -5,6 +5,8 @@ import { Parking } from "../parking";
 import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
 import { ParkingAPIService } from '../parking-api.service';
+import { Restaurant } from "../restaurant";
+import { RestaurantService } from "../restaurant.service";
 
 @Component({
   selector: "app-gmap",
@@ -15,11 +17,13 @@ export class GmapComponent implements OnInit {
   park: Parking[];
   venue: Venue[];
   infoContent: string;
+  restaurant: Restaurant[];
   constructor(
     private pService: ParkingMarkersService,
     public vService: VenuesService,
     // private direction: DirectionsService,
-    public parking: ParkingAPIService
+    public parking: ParkingAPIService,
+    public rService: RestaurantService
   ) { }
 
   //Decorator for Map
@@ -283,6 +287,9 @@ export class GmapComponent implements OnInit {
   
     //Call Venue Markers
     this.venue = this.vService.getVenue();
+
+    //Call Restaurant Markers
+    this.restaurant = this.rService.getRestaurant();
 
 
   }//--End of Initialization
