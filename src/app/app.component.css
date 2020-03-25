@@ -6,6 +6,7 @@
   padding-left: 110px;
   margin: 30px;
   align-items: flex-end;
+  
 }
 
 h1 {
@@ -88,5 +89,6 @@ footer {
     padding-bottom: 30%;
     margin: 20px;
     align-items: flex-end;
+   
   }
 }
