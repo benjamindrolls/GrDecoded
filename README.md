@@ -3,37 +3,59 @@
  
 <h1 align="center" style:color="red">TEAM Members for</h1>
 
-### *Spencer Deering*  [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
-### *Jordan Gaza* [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
-### *Benjamin Rolls* [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
+
+# *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
+### *Spencer Deering*    [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
+### *Jordan Gaza*        [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
+### *Benjamin Rolls*     [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
 ### *Ramona Saintandre* [LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)  
-### *Kevin Marusek*  [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
+### *Kevin Marusek*     [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
+<style
+  type="text/css">
+h3 {color:red;}
 
+p {color:black;}
+</style>
 
- 
+Grand Rapids vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city.   
+The City of Grand Rapids is a city of culture, divisity, and Art.   
 
- # **What problem are we trying to solve?** 
-***
-Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan. 
+ Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan.   
 
 Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that Grand Rapids has to offer. 
 
-We would like to make it even easier for the average person to experience Grand Rapids by providing a useful tool to navigate the city. 
+Working with the City of Grand Rapids Parking Data, our Team has created an app that will assist vistor in navigating our City. 
 
-Our project seeks to grant access to a map outlining the variety of parking options and venue locations making it easier than ever to traverse Grand Rapids. 
-
-# **Why is this an important problem to solve?**
 ***
-### *Team DestinationGR*  
-is excited to work on this project because it is something we can solve. 
 
-Creating an easier experience for people looking to visit Grand Rapids not only provides on opportunity to boost tourism but allows those of us living here to support the city we love. 
+We have created an application that will allow a user to select a popular Grand Rapids destination.  
 
-# **What City data have we used and what technologies we used?** 
+When the veunue is selected the user will be able to view all of the parking sturctures closest to the their destination.  
+Upon clicking each parking structure location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
+
+Then they will be able to select the  partking structure of their choice and using the Google maps to navigate to their selected destionation.     
+Upon clicking each major Venue the user will also be able to see what activities are available at that destination.  
+
+By using the app, the user will not have to drive around searching for parking, or are able to park as close to their destionation as possible.   
+
+
 ***
-We utilized the city parking data, displaying parking structures over a google map display 
+# Technologies that are used to build this project:  
+*NodeJS*   
+*Angular 9*   
+*HTML*   
+*CSS*   
 
-Upon clicking each parking location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
+
+## Google Maps API 
+**Geolocation**  for the distance   
+**location**  
+**places** for the resturants   
+
+
+We utilized the city parking data, displaying parking structures over a google map display. 
+
+
 
 We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
 
