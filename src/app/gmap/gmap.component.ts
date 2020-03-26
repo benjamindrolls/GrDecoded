@@ -22,6 +22,7 @@ export class GmapComponent implements OnInit {
     // public vService: VenuesService,
     // private direction: DirectionsService,
     // public rService: RestaurantService
+
   ) { }
 
   //Decorator for Map
