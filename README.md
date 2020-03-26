@@ -59,7 +59,7 @@ We have utilized HTML, CSS and JavaScript in an Angular framework for this proje
 
 <!-- ![DestinationGR Demo](src/assets/destinationGR.gif) -->
 <img src = './src/assets/appimage.PNG' alt = 'app image'>
-<img src = './src/assets/logo.jpg' alt = 'Logo Image'>
+
 <!-- **Conclusion**  -->
 
 # ***Project specification on how to run the project*** 
