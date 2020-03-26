@@ -1,4 +1,4 @@
-.contain{
+.contain {
   display: flex;
 }
 
@@ -6,62 +6,57 @@
   padding-left: 110px;
   margin: 30px;
   align-items: flex-end;
-  
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
 }
 
 h1 {
-    font-family: 'Anton', sans-serif;
-    background-color: silver;
-    margin: 0;
-    font-size: 3em;
-    padding-left: 5px;
-    text-shadow: rgb(97, 211, 52) -1px -2px 0.5em;
-    text-align: center;
+  font-family: "Anton", sans-serif;
+  background-color: silver;
+  margin: 0;
+  font-size: 3em;
+  padding-left: 5px;
+  text-shadow: rgb(97, 211, 52) -1px -2px 0.5em;
+  text-align: center;
 }
 
 footer {
-    background-color: #B9D3C2;
-    text-align: center;
-    width: 100%;
+  background-color: #b9d3c2;
+  text-align: center;
+  width: 100%;
 }
 
-.fa {
-    padding: 10px;
-    font-size: 20px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  .fa-facebook {
-    background: #E98D58;
-    color: white;
-  }
-  .fa-instagram {
-    background: #F88181;
-    color: white;
-  }
-  .fa-twitter {
-    background: #A5B076;
-    color: white;
-  }
-  
-  .logo{
-    width: 45%;
-    padding-left: 5%;
-    display: flex;
-  }
+.dot {
+  width: 30px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #383a3c;
+  color: #b9d3c2;
+  border-radius: 40%;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 5px 2px;
+  cursor: pointer;
+}
 
-  header{
-    background-color: #B9D3C2;
-    width: 100%;
-  }
-  
+.logo {
+  width: 45%;
+  padding-left: 5%;
+  display: flex;
+}
+
+header {
+  background-color: #b9d3c2;
+  width: 100%;
+}
 
 /*Desktop*/
 @media only screen and (min-width: 992px) {
-  .logo{
+  .logo {
     transform: scale(0.5, 0.5);
     position: relative;
     right: 0px;
@@ -70,17 +65,21 @@ footer {
     margin-top: -35px;
   }
 
-  header{
+  .dropdown-content {
+    display: none;
+  }
+
+  header {
     height: 70px;
     width: 100%;
   }
 
-  footer{
+  footer {
     height: 50px;
   }
 
-  .contain{
-    display: flex;   
+  .contain {
+    display: flex;
   }
 
   .menu {
@@ -89,6 +88,5 @@ footer {
     padding-bottom: 30%;
     margin: 20px;
     align-items: flex-end;
-   
   }
 }
