@@ -16,7 +16,8 @@ p {color:black;}
 </style>
 
 Grand Rapids vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city.   
-The City of Grand Rapids is a city of culture, divisity, and Art.      
+The City of Grand Rapids is a city of culture, divisity, and Art.   
+
  Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan.   
 
 Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that Grand Rapids has to offer. 
@@ -26,15 +27,18 @@ Working with the City of Grand Rapids Parking Data, our Team has created an app 
 ***
 
 We have created an application that will allow a user to select a popular Grand Rapids destination.  
+
 When the veunue is selected the user will be able to view all of the parking sturctures closest to the their destination.  
-Upon clicking each parking structure location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day.  
+Upon clicking each parking structure location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
+
 Then they will be able to select the  partking structure of their choice and using the Google maps to navigate to their selected destionation.     
-Upon clicking each major Venue the user will also be able to see what activities are available at that destination.     
+Upon clicking each major Venue the user will also be able to see what activities are available at that destination.  
+   
 By using the app, the user will not have to drive around searching for parking, or are able to park as close to their destionation as possible.   
 
-# **What City data have we used and what technologies we used?** 
+
 ***
-Technologies that are used to build this project:  
+# Technologies that are used to build this project:  
 *NodeJS*   
 *Angular 9*   
 *HTML*   
@@ -47,10 +51,10 @@ Technologies that are used to build this project:
 **places** for the resturants   
 
 
-We utilized the city parking data, displaying parking structures over a google map display 
+We utilized the city parking data, displaying parking structures over a google map display. 
 
 
-We have utilized HTML, CSS and JavaScript in an Angular framework for this project 
+
 
 <!-- **Conclusion**  -->
 
