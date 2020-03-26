@@ -1,15 +1,15 @@
 
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
  
-<h1 align="center" style:color="red"><style>h1{color:red;}</style>TEAM Members for</h1>
+<h1 align="center" </style>TEAM Members for</h1>
 
 
 
 
 <!-- # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/) -->
-| **Team Member Name** | Team Member Contact |  
-| --- | --- |
-**Spencer Deering**    | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  
+| Image | **Team Member Name** | Team Member Contact |  
+|---| --- | --- |
+<img src = './src/assets/spencer.jpg' alt = 'Spencer Image' > **Spencer Deering**    | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  
 **Jordan Gaza**        | **[LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)**  
 **Benjamin Rolls**     | **[LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)**  
 **Ramona Saintandre**  | **[LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)**  
