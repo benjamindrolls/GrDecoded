@@ -14,7 +14,7 @@
 ### *Kevin Marusek*     [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
 <style
   type="text/css">
-h3 {color:red;}
+h3 {color:green;}
 
 p {color:black;}
 </style>
