@@ -35,8 +35,9 @@ We utilized the city parking data, displaying parking structures over a google m
 
 Upon clicking each parking location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
 
-We have utilized HTML, CSS and JavaScript in an Angular framework for this project 
+We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
 
+<img src = './src/assets/destinationGR.gif' alt = 'App Demo'>
 <!-- **Conclusion**  -->
 
 # ***Project specification on how to run the project*** 
