@@ -3,11 +3,11 @@
 
 
 # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
-### *Spencer Deering*  [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
-### *Jordan Gaza* [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
-### *Benjamin Rolls* [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
+### *Spencer Deering*    [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
+### *Jordan Gaza*        [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
+### *Benjamin Rolls*     [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
 ### *Ramona Saintandre* [LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)  
-### *Kevin Marusek*  [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
+### *Kevin Marusek*     [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
 <style
   type="text/css">
 h3 {color:red;}
@@ -33,7 +33,7 @@ Upon clicking each parking structure location, a tab will appear displaying the 
 
 Then they will be able to select the  partking structure of their choice and using the Google maps to navigate to their selected destionation.     
 Upon clicking each major Venue the user will also be able to see what activities are available at that destination.  
-   
+
 By using the app, the user will not have to drive around searching for parking, or are able to park as close to their destionation as possible.   
 
 
