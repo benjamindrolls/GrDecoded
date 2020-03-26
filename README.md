@@ -56,7 +56,7 @@ By using the app, the user will not have to drive around searching for parking, 
 
 We utilized the city parking data, displaying parking structures over a google map display. 
 
-We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
+<!-- We have utilized HTML, CSS and JavaScript in an Angular framework for this project    -->
 
 <!-- ![DestinationGR Demo](src/assets/destinationGR.gif) -->
 <img src = './src/assets/appimage.PNG' alt = 'app image'>
