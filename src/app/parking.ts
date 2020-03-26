@@ -1,4 +1,3 @@
-
 export interface Parking
     {
         position:  google.maps.LatLng,
