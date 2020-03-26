@@ -1,5 +1,7 @@
 
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
+ 
+<h1 align="center" style:color="red">TEAM Members for</h1>
 
 
 # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
@@ -57,7 +59,7 @@ We utilized the city parking data, displaying parking structures over a google m
 
 We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
 
-<img src = './src/assets/destinationGR.gif' alt = 'App Demo'>
+![DestinationGR Demo](./src/assets/destinationGR.gif) 
 <!-- **Conclusion**  -->
 
 # ***Project specification on how to run the project*** 
