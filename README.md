@@ -55,7 +55,9 @@ We utilized the city parking data, displaying parking structures over a google m
 
 
 
+We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
 
+<img src = './src/assets/destinationGR.gif' alt = 'App Demo'>
 <!-- **Conclusion**  -->
 
 # ***Project specification on how to run the project*** 
