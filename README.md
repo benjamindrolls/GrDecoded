@@ -8,26 +8,28 @@
 ### *Benjamin Rolls* [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
 ### *Ramona Saintandre* [LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)  
 ### *Kevin Marusek*  [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
+<style
+  type="text/css">
+h3 {color:red;}
 
+p {color:black;}
+</style>
 
- 
-
- # **What problem are we trying to solve?** 
-***
-Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan. 
+Grand Rapids vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city. 
+The City of Grand Rapids is a city of culture, divisity, and Art.    
+ Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan. 
 
 Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that Grand Rapids has to offer. 
 
-We would like to make it even easier for the average person to experience Grand Rapids by providing a useful tool to navigate the city. 
+Working with the City of Grand Rapids Parking Data, our Team has created an app that will assist vistor in navigating our City. 
 
-Our project seeks to grant access to a map outlining the variety of parking options and venue locations making it easier than ever to traverse Grand Rapids. 
 
-# **Why is this an important problem to solve?**
 ***
-### *Team DestinationGR*  
-is excited to work on this project because it is something we can solve. 
+### *Team DestinationGR* 
+has created an application that will allow a user to select a popular Grand Rapids destination.
+When the veunue is selected the user will be able to view all of the parking sturctures closest to the their destination. 
 
-Creating an easier experience for people looking to visit Grand Rapids not only provides on opportunity to boost tourism but allows those of us living here to support the city we love. 
+ 
 
 # **What City data have we used and what technologies we used?** 
 ***
