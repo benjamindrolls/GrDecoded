@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { VenuesService } from '../venues.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
+
+import { Venue } from '../venue';
+import { VenuesService } from '../venues.service';
 
 
 
@@ -10,20 +12,26 @@ import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
   styleUrls: ['./venues.component.css']
 })
 export class VenuesComponent implements OnInit {
-  // venue : Venues[];
-  constructor() { }
+  infoContent: string;
+  venue : Venue [];
+  constructor(
+    public vService: VenuesService,
+  ) { }
 
-  ngOnInit(): void {
+    //Decorator for Info Pop Ups
+    @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
+
+  ngOnInit(){
+        //Call Venue Markers
+        this.venue = this.vService.getVenue();
+  }//End of Initialization
+
+  //opening info content
+
+  openInfo(marker: MapMarker, content) {
+    this.infoContent = content;
+    this.infoWindow.open(marker);
+    console.log('info opened');
   }
-
-
-  //venue open?
-//   stuff = "<p>{this.venues}</p>";
-//   venueContent = "<p>{this.venues}</p>";
-//   open = false;
-
-//   getStuff(marker: MapMarker, content) {
-//   this.venueContent = content;
-//   this.stuff.open(marker);
-// }
-}
+  
+  }//--End of Export 
