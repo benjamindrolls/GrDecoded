@@ -47,12 +47,14 @@ By using the app, the user will not have to drive around searching for parking, 
 # Technologies that are used to build this project: 
 | Base Code | Google Maps API's | City of Grand Rapids Api |
 | --- | --- |  ----| 
-**NodeJS**    | **Geolocation**  for the distance |  
-**Angular 9** | **location** |   
-**HTML**      | **places** for the resturants |
-**CSS**       |    
-**JavaScript**|
-**TypeScript**|
+**NodeJS**     | **Geolocation**  for the distance |  
+**Angular 9**  | **location** |   
+**HTML**       | **places** for the resturants |
+**CSS**        |    
+**JavaScript** |
+**TypeScript** |
+**gh-pages**   |
+**google-maps**|
 
 
 <!-- ## Google Maps API  -->
