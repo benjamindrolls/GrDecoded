@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, Input } from '@angular/core';
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 
 import { Venue } from '../venue';
 import { VenuesService } from '../venues.service';
+import { EventEmitter } from '@angular/core';
 
 
 
@@ -13,30 +14,53 @@ import { VenuesService } from '../venues.service';
 })
 export class VenuesComponent implements OnInit {
   infoContent: string;
-  venue : Venue [];
-  venues: any;
+  venue: Venue[];
+  directionService = new google.maps.DirectionsService();
+  DirectionsRenderer = new google.maps.DirectionsRenderer();
+  @Input() restaurants: any
   constructor(
     public vService: VenuesService,
   ) { }
+  venues: any
 
-    //Decorator for Info Pop Ups
-    @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
+  @Output() vDirections = new EventEmitter()
 
-  ngOnInit(){
-        //Call Venue Markers
-        this.venue = this.vService.getVenue();
+  //Decorator for Info Pop Ups
+  @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
+
+  ngOnInit() {
+    //Call Venue Markers
+    this.venue = this.vService.getVenue();
   }//End of Initialization
 
   //opening info content
   setVenue(position) {
     this.venues = position
-    return this.venues
+    this.vDirections.emit(this.venues)
   }
+
+  setDirections() {
+    let request = {
+      origin: this.restaurants,
+      destination: this.venues,
+      travelMode: google.maps.TravelMode.WALKING
+    };
+    if (request.origin && request.destination) {
+      this.directionService.route(request, (result, status) => {
+        if (status === "OK") {
+          this.DirectionsRenderer.setDirections(result)
+        }
+      })
+    } else {
+      console.log('hello')
+    }
+  }
+
 
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
     this.infoWindow.open(marker);
     console.log('info opened');
   }
-  
-  }//--End of Export 
+
+}//--End of Export 
