@@ -10,6 +10,8 @@ import { VenuesComponent } from './venues/venues.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     GmapComponent,
     ParkingAPIComponent,
     VenuesComponent,
+    RestaurantsComponent,
   ],
   imports: [
     BrowserModule,

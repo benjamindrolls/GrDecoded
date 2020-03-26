@@ -8,6 +8,10 @@ import { ParkingAPIService } from '../parking-api.service';
 import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
 import { MatSnackBar } from '@angular/material/snack-bar';
+// import { Venue } from '../venue';
+// import { VenuesService } from "../venues.service";
+// import { Restaurant } from "../restaurant";
+// import { RestaurantService } from "../restaurant.service";
 
 @Component({
   selector: "app-gmap",
@@ -16,7 +20,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class GmapComponent implements OnInit, AfterViewInit {
   park: Parking[];
-  venue: Venue[];
+  // venue: Venue[];
   infoContent: string;
   restaurant: Restaurant[];
   directionService = new google.maps.DirectionsService();
@@ -27,7 +31,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
     public parking: ParkingAPIService,
     public rService: RestaurantService,
     private snackBar: MatSnackBar,
-
+  // restaurant: Restaurant[];
   ) { }
 
   //Decorator for Map
@@ -294,10 +298,10 @@ export class GmapComponent implements OnInit, AfterViewInit {
     this.park = this.pService.getMarkers();
 
     //Call Venue Markers
-    this.venue = this.vService.getVenue();
+    // this.venue = this.vService.getVenue();
 
     //Call Restaurant Markers
-    this.restaurant = this.rService.getRestaurant();
+    // this.restaurant = this.rService.getRestaurant();
 
 
   }//--End of Initialization
