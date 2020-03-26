@@ -37,7 +37,7 @@ Upon clicking each parking location, a tab will appear displaying the name of th
 
 We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
 
-<img src = './src/assets/destinationGR.gif' alt = 'App Demo'>
+![DestinationGR Demo](./src/assets/destinationGR.gif) 
 <!-- **Conclusion**  -->
 
 # ***Project specification on how to run the project*** 
