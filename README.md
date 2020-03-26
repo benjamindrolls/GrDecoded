@@ -7,13 +7,13 @@
 
 
 <!-- # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/) -->
-| Team Member Name | Team Member Contact |  
+| **Team Member Name** | Team Member Contact |  
 | --- | --- |
-Spencer Deering | [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/) |  
-Jordan Gaza     |   [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
-Benjamin Rolls  |  [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
-Ramona Saintandre | [LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)  
-Kevin Marusek  |  [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
+**Spencer Deering**    | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  
+**Jordan Gaza**        | **[LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)**  
+**Benjamin Rolls**     | **[LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)**  
+**Ramona Saintandre**  | **[LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)**  
+**Kevin Marusek**      | **[LinkedIn](https://www.linkedin.com/in/kevin-marusek/)**  
 <style
   type="text/css">
 h3 {color:green;}
@@ -21,18 +21,18 @@ h3 {color:green;}
 p {color:black;}
 </style>
 
-Grand Rapids vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city.   
-The City of Grand Rapids is a city of culture, divisity, and Art.   
+**Grand Rapids** vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city.   
+The **City of Grand Rapids** is a city of culture, divisity, and Art.   
 
- Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan.   
+ **Grand Rapids** has become a destination city of the last decade, making it the entertainment capital of West Michigan.   
 
-Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that Grand Rapids has to offer. 
+Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that **Grand Rapids** has to offer. 
 
-Working with the City of Grand Rapids Parking Data, our Team has created an app that will assist vistor in navigating our City. 
+Working with the **City of Grand Rapids** Parking Data, our Team has created an app that will assist vistor in navigating our City. 
 
 ***
 
-We have created an application that will allow a user to select a popular Grand Rapids destination.  
+We have created an application that will allow a user to select a popular **Grand Rapids** destination.  
 
 When the veunue is selected the user will be able to view all of the parking sturctures closest to the their destination.  
 Upon clicking each parking structure location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
@@ -44,17 +44,21 @@ By using the app, the user will not have to drive around searching for parking, 
 
 
 ***
-# Technologies that are used to build this project:  
-*NodeJS*   
-*Angular 9*   
-*HTML*   
-*CSS*   
+# Technologies that are used to build this project: 
+| Base Code | Google Maps API's | City of Grand Rapids Api |
+| --- | --- |  ----| 
+**NodeJS**    | **Geolocation**  for the distance |  
+**Angular 9** | **location** |   
+**HTML**      | **places** for the resturants |
+**CSS**       |    
+**JavaScript**|
+**TypeScript**|
 
 
-## Google Maps API 
-**Geolocation**  for the distance   
-**location**  
-**places** for the resturants   
+<!-- ## Google Maps API  -->
+ 
+
+  
 
 
 We utilized the city parking data, displaying parking structures over a google map display. 
