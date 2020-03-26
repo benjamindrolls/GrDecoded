@@ -14,12 +14,7 @@
 **Benjamin Rolls**     | **[LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)**  
 **Ramona Saintandre**  | **[LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)**  
 **Kevin Marusek**      | **[LinkedIn](https://www.linkedin.com/in/kevin-marusek/)**  
-<style
-  type="text/css">
-h3 {color:green;}
 
-p {color:black;}
-</style>
 
 **Grand Rapids** vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city.   
 The **City of Grand Rapids** is a city of culture, divisity, and Art.   
