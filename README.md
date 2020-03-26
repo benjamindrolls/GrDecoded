@@ -1,20 +1,21 @@
 
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
  
-<h1 align="center" </style>TEAM Members for</h1>
+<h1 align="center" </style>TEAM Members for DestinationGR App </h1>
 
 
 
 
 <!-- # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/) -->
-|     | ** Team Member Contact** |  
+|     | **Team Member Contact** |  
 |---| --- |
-|<img src = './src/assets/spencer.jpg' alt = 'Spencer Image' width ="75" height="75">  **Spencer Deering** | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  |
-**Jordan Gaza**        | **[LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)**  
-**Benjamin Rolls**     | **[LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)**  
-**Ramona Saintandre**  | **[LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)**  
-**Kevin Marusek**      | **[LinkedIn](https://www.linkedin.com/in/kevin-marusek/)**  
+|<img src = './src/assets/spencer.jpg' alt = 'Spencer Deering Image' width ="75" height="75">  **Spencer Deering**   | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  |
+|<img src = './src/assets/Jordan.jpg' alt = 'Jordan Gaza Image' width ="75" height="75"> **Jordan Gaza**             | **[LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)**  
+|<img src = './src/assets/Benjamin.jpg' alt = 'Benjamin Rolls Image' width ="75" height="75"> **Benjamin Rolls**     | **[LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)**  
+|<img src = './src/assets/Ramona.jpg' alt = 'Ramona Saintandre Image' width ="75" height="75">**Ramona Saintandre**  | **[LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)**  
+|<img src = './src/assets/kevin.jpg' alt = 'Kevin Marusek Image' width ="75" height="75">**Kevin Marusek**           | **[LinkedIn](https://www.linkedin.com/in/kevin-marusek/)**  
 
+## About the application 
 
 **Grand Rapids** vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city.   
 The **City of Grand Rapids** is a city of culture, divisity, and Art.   
