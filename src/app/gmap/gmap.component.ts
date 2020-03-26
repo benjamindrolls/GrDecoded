@@ -37,6 +37,10 @@ export class GmapComponent implements OnInit, AfterViewInit {
   @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
 
 
+  coords: any;
+  venues: any;
+  restaurants: any;
+  duration: number;
   zoom = 15;
   center: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
@@ -298,9 +302,11 @@ export class GmapComponent implements OnInit, AfterViewInit {
 
   }//--End of Initialization
 
+  //renders the directions to the map
   ngAfterViewInit() {
     this.DirectionsRenderer.setMap(this.map._googleMap)
   }
+
   zoomIn() {
     if (this.zoom < this.options.maxZoom) this.zoom++;
   }
@@ -309,8 +315,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
 
-  coords: any;
-  venues: any;
+  //method that sets the coordinates for parking structures
   setPosition(position) {
 
     this.coords = position
@@ -318,17 +323,25 @@ export class GmapComponent implements OnInit, AfterViewInit {
 
     return this.coords
   }
+
+  //method that set coordinates for venues
   setVenue(position) {
     this.venues = position
 
     return this.venues
   }
-duration: number
 
+  setRestaurant(position) {
+    this.restaurants = position
+
+    return this.restaurants
+  }
+
+  //method that calls a directions request and then displays them on map
   setDirections() {
     let request = {
-      origin: this.venues,
-      destination: this.coords,
+      origin: this.venues || this.restaurants || this.coords,
+      destination: this.coords || this.restaurants || this.venues,
       travelMode: google.maps.TravelMode.WALKING
     };
     if (request.origin && request.destination) {
@@ -338,7 +351,7 @@ duration: number
         }
       })
     } else {
-      this.snackBar.open('Click a venue to get directions', '',{
+      this.snackBar.open('Click on venue, parking structure or restaurant to get directions', '', {
         duration: 2000
       })
     }
