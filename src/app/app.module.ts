@@ -8,6 +8,8 @@ import { GmapComponent } from './gmap/gmap.component';
 import { ParkingAPIComponent } from './parking-api/parking-api.component';
 import { VenuesComponent } from './venues/venues.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     GoogleMapsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
     
   ],
   providers: [],
