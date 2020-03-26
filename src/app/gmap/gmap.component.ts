@@ -2,11 +2,10 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
-import { Venue } from '../venue';
-import { VenuesService } from "../venues.service";
-import { ParkingAPIService } from '../parking-api.service';
-import { Restaurant } from "../restaurant";
-import { RestaurantService } from "../restaurant.service";
+// import { Venue } from '../venue';
+// import { VenuesService } from "../venues.service";
+// import { Restaurant } from "../restaurant";
+// import { RestaurantService } from "../restaurant.service";
 
 @Component({
   selector: "app-gmap",
@@ -15,15 +14,14 @@ import { RestaurantService } from "../restaurant.service";
 })
 export class GmapComponent implements OnInit {
   park: Parking[];
-  venue: Venue[];
+  // venue: Venue[];
   infoContent: string;
-  restaurant: Restaurant[];
+  // restaurant: Restaurant[];
   constructor(
     private pService: ParkingMarkersService,
-    public vService: VenuesService,
+    // public vService: VenuesService,
     // private direction: DirectionsService,
-    public parking: ParkingAPIService,
-    public rService: RestaurantService
+    // public rService: RestaurantService
   ) { }
 
   //Decorator for Map
@@ -286,10 +284,10 @@ export class GmapComponent implements OnInit {
     this.park = this.pService.getMarkers();
   
     //Call Venue Markers
-    this.venue = this.vService.getVenue();
+    // this.venue = this.vService.getVenue();
 
     //Call Restaurant Markers
-    this.restaurant = this.rService.getRestaurant();
+    // this.restaurant = this.rService.getRestaurant();
 
 
   }//--End of Initialization

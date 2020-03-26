@@ -8,6 +8,7 @@ import { GmapComponent } from './gmap/gmap.component';
 import { ParkingAPIComponent } from './parking-api/parking-api.component';
 import { VenuesComponent } from './venues/venues.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     GmapComponent,
     ParkingAPIComponent,
     VenuesComponent,
+    RestaurantsComponent,
   ],
   imports: [
     BrowserModule,

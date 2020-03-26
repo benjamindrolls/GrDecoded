@@ -1,1 +1,11 @@
-<p>venues works!</p>
+ <!-- Venue Marker -->
+ <map-marker #markerElem *ngFor="let marker of venue, let i = index" [position]="marker.position"
+ [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)" (mapClick)="setVenue(marker.position)">
+
+ <map-info-window>
+   <div [innerHTML]=infoContent></div>
+ </map-info-window>
+ 
+</map-marker>
+<!-- End Venue Marker -->
+
