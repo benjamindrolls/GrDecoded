@@ -4,7 +4,7 @@ import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
-import { ParkingAPIService } from '../parking-api.service';
+// import { ParkingAPIService } from '../parking-api.service';
 import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -20,7 +20,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class GmapComponent implements OnInit, AfterViewInit {
   park: Parking[];
-  // venue: Venue[];
+  venue: Venue[];
   infoContent: string;
   restaurant: Restaurant[];
   directionService = new google.maps.DirectionsService();
@@ -28,7 +28,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
   constructor(
     private pService: ParkingMarkersService,
     public vService: VenuesService,
-    public parking: ParkingAPIService,
+    // public parking: ParkingAPIService,
     public rService: RestaurantService,
     private snackBar: MatSnackBar,
   // restaurant: Restaurant[];

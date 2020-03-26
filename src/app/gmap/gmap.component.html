@@ -13,26 +13,8 @@
   </map-marker>
   <!-- End Parking Marker -->
 
-
-  <!-- Venue Marker -->
-
-<!--     <map-marker #markerElem *ngFor="let marker of venue, let i = index" [position]="marker.position"
-    [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)" (mapClick)="setVenue(marker.position)">
-    
-  </map-marker>
-  <!-- End Venue Marker -->
-
-  <!-- Restaurant Marker-->
-  <map-marker #markerElem *ngFor="let marker of restaurant, let i = index"
-  [position]="marker.position" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)"
-  (mapClick)="setRestaurant(marker.position)">
-
   <app-venues></app-venues>
-  <!-- End Venue Marker -->
-
-  <!-- Restaurant Marker-->
+ 
   <app-restaurants></app-restaurants>
-
-  <!--End Restaurant Marker-->
   
 </google-map>

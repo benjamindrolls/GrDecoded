@@ -14,6 +14,7 @@ import { VenuesService } from '../venues.service';
 export class VenuesComponent implements OnInit {
   infoContent: string;
   venue : Venue [];
+  venues: any;
   constructor(
     public vService: VenuesService,
   ) { }
@@ -27,6 +28,10 @@ export class VenuesComponent implements OnInit {
   }//End of Initialization
 
   //opening info content
+  setVenue(position) {
+    this.venues = position
+    return this.venues
+  }
 
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
