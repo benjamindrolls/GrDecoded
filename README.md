@@ -1,7 +1,9 @@
 
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
  
-<h1 align="center" style:color="red">TEAM Members for</h1>
+<h1 align="center" style:color="red"><style>h1{color:red;}</style>TEAM Members for</h1>
+
+
 
 ### *Spencer Deering*  [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
 ### *Jordan Gaza* [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
