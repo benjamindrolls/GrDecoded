@@ -1,27 +1,37 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
+// import { ParkingAPIService } from '../parking-api.service';
 import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
+import { MatSnackBar } from '@angular/material/snack-bar';
+// import { Venue } from '../venue';
+// import { VenuesService } from "../venues.service";
+// import { Restaurant } from "../restaurant";
+// import { RestaurantService } from "../restaurant.service";
 
 @Component({
   selector: "app-gmap",
   templateUrl: "./gmap.component.html",
   styleUrls: ["./gmap.component.css"]
 })
-export class GmapComponent implements OnInit {
+export class GmapComponent implements OnInit, AfterViewInit {
   park: Parking[];
   venue: Venue[];
   infoContent: string;
   restaurant: Restaurant[];
+  directionService = new google.maps.DirectionsService();
+  DirectionsRenderer = new google.maps.DirectionsRenderer();
   constructor(
     private pService: ParkingMarkersService,
     public vService: VenuesService,
-    // private direction: DirectionsService,
-    public rService: RestaurantService
+    // public parking: ParkingAPIService,
+    public rService: RestaurantService,
+    private snackBar: MatSnackBar,
+  // restaurant: Restaurant[];
   ) { }
 
   //Decorator for Map
@@ -31,6 +41,10 @@ export class GmapComponent implements OnInit {
   @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
 
 
+  coords: any;
+  venues: any;
+  restaurants: any;
+  duration: number;
   zoom = 15;
   center: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
@@ -273,7 +287,7 @@ export class GmapComponent implements OnInit {
     ]
   };//--End of Styles
 
-//Sets Starting Map Location Over GR
+  //Sets Starting Map Location Over GR
   ngOnInit() {
     this.center = {
       lat: 42.96322,
@@ -282,16 +296,20 @@ export class GmapComponent implements OnInit {
 
     //Call Parking Markers
     this.park = this.pService.getMarkers();
-  
+
     //Call Venue Markers
-    this.venue = this.vService.getVenue();
+    // this.venue = this.vService.getVenue();
 
     //Call Restaurant Markers
-    this.restaurant = this.rService.getRestaurant();
+    // this.restaurant = this.rService.getRestaurant();
 
 
   }//--End of Initialization
 
+  //renders the directions to the map
+  ngAfterViewInit() {
+    this.DirectionsRenderer.setMap(this.map._googleMap)
+  }
 
   zoomIn() {
     if (this.zoom < this.options.maxZoom) this.zoom++;
@@ -300,45 +318,57 @@ export class GmapComponent implements OnInit {
   zoomOut() {
     if (this.zoom > this.options.minZoom) this.zoom--;
   }
- 
-  coords: any;
-  venues: any;
+
+  //method that sets the coordinates for parking structures
   setPosition(position) {
-    
+
     this.coords = position
 
-  
+
     return this.coords
   }
-  setVenue(position){
+
+  //method that set coordinates for venues
+  setVenue(position) {
     this.venues = position
 
     return this.venues
   }
 
+  setRestaurant(position) {
+    this.restaurants = position
+
+    return this.restaurants
+  }
+
+  //method that calls a directions request and then displays them on map
   setDirections() {
-    let directionService = new google.maps.DirectionsService();
-    let DirectionsRenderer = new google.maps.DirectionsRenderer();
-    DirectionsRenderer.setMap(this.map._googleMap);
     let request = {
-      origin: this.venues,
-      destination: this.coords,
+      origin: this.coords,
+      destination: this.restaurants || this.venues,
       travelMode: google.maps.TravelMode.WALKING
     };
-    directionService.route(request, function (result, status) {
-      if (status === "OK") {
-        DirectionsRenderer.setDirections(result)
-      }
-    })
+    if (request.origin && request.destination) {
+      this.directionService.route(request, (result, status) => {
+        if (status === "OK") {
+          this.DirectionsRenderer.setDirections(result)
+        }
+      })
+    } else {
+      this.snackBar.open('Click on parking area, and then choose a venue or a restaurant to get directions', '', {
+        duration: 2000
+      })
+    }
   }
 
 
   //opening info content
 
-openInfo(marker: MapMarker, content) {
-  this.infoContent = content;
-  this.infoWindow.open(marker);
-  console.log('info opened');
-}
+  openInfo(marker: MapMarker, content) {
+    this.infoContent = content;
+    this.infoWindow.open(marker);
+    console.log('info opened');
+  }
+  
 
 }//--End of Export 

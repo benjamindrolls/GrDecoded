@@ -1,0 +1,10 @@
+ <!-- Restaurant Marker-->
+ <map-marker #markerElem *ngFor="let marker of restaurant, let i = index"
+ [position]="marker.position" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)">
+
+ <map-info-window>
+   <div [innerHTML]=infoContent></div>
+ </map-info-window>
+ </map-marker>
+ <!--End Restaurant Marker-->
+ 

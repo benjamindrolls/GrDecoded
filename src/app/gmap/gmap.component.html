@@ -1,5 +1,6 @@
 <google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options" id="map">
-<!-- Parking Marker -->
+
+   <!-- Parking Marker -->
   <map-marker #markerElem *ngFor="let marker of park" [position]="marker.position" [label]="marker.label"
     [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)"
     (mapClick)="setPosition(marker.position)">
@@ -12,26 +13,8 @@
   </map-marker>
   <!-- End Parking Marker -->
 
-
-  <!-- Venue Marker -->
-    <map-marker #markerElem *ngFor="let marker of venue, let i = index" [position]="marker.position"
-    [options]="marker.options" (mapClick)="openInfo( markerElem, marker.info)" (mapClick)="setVenue(marker.position)">
-
-    <map-info-window>
-      <div [innerHTML]=infoContent></div>
-    </map-info-window>
-    
-  </map-marker>
-  <!-- End Venue Marker -->
-
-  <!-- Restaurant Marker-->
-  <map-marker #markerElem *ngFor="let marker of restaurant, let i = index"
-  [position]="marker.position" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)">
-
-  <map-info-window>
-    <div [innerHTML]=infoContent></div>
-  </map-info-window>
-  </map-marker>
-  <!--End Restaurant Marker-->
+  <app-venues></app-venues>
+ 
+  <app-restaurants></app-restaurants>
   
 </google-map>
