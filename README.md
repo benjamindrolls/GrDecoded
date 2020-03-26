@@ -52,19 +52,12 @@ By using the app, the user will not have to drive around searching for parking, 
 **google-maps**|
 
 
-<!-- ## Google Maps API  -->
- 
-
-  
-
 
 We utilized the city parking data, displaying parking structures over a google map display. 
 
-
-
 We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
 
-![DestinationGR Demo](/src/assets/destinationGR.gif)
+![DestinationGR Demo](src/assets/destinationGR.gif)
 
 <!-- **Conclusion**  -->
 
