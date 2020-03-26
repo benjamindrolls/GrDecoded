@@ -1,6 +1,8 @@
 import { Injectable, ViewChild } from '@angular/core';
 import { Parking } from './parking';
 import { MapInfoWindow } from "@angular/google-maps";
+import { IParking } from './iparking';
+import {HttpClient} from '@angular/common/http'
 
 
 let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
@@ -10,7 +12,20 @@ let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 export class ParkingMarkersService {
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
   infoContent = '<h1>hey testing</h1>'
-// why is hey parking not poping up on all icons
+
+  private baseFilterUrl: string = "https://grand-rapids-proxy.herokuapp.com/proxy/resource/nb67-knvp.json?parker_type=Total&$select=lot_name,count";
+  
+  constructor(private http: HttpClient) { }
+  
+  getFilteredData(category: IParking) {
+      return this.http.get(
+        `${this.baseFilterUrl}`
+      );
+    }
+
+  getMarkers(): Parking[] {
+    return this.park;
+  }
 
   park: Parking[] = [
     {
@@ -18,6 +33,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'McConnell Ionia Lot',
+      lot_name: 'McConnel',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -26,6 +42,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Cherry Commerce Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -34,6 +51,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Studio Park Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -42,6 +60,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Market St Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -50,6 +69,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Napa Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -58,6 +78,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Weston Commerce Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -66,6 +87,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'The Gallery Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -74,6 +96,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Ottawa Fulton Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -82,6 +105,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Monroe Center Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -90,6 +114,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Pearl Ionia Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -98,6 +123,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'DeVos Place Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -106,6 +132,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Government Center Ramp',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -114,6 +141,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 3 Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -122,6 +150,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 2 Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -130,6 +159,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 6A Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -138,6 +168,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 9 Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -146,6 +177,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 8 Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -154,6 +186,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 7 Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -162,6 +195,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Scribner Lot',
+      lot_name: 'Cherry Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -169,10 +203,8 @@ export class ParkingMarkersService {
 
   ];
 
-  constructor() { };
-
-  getMarkers(): Parking[] {
-    return this.park;
-  }
+  
+  //for each
+  //.find to get count from static date, take object.info
 
 }
