@@ -23,6 +23,9 @@ export class ParkingMarkersService {
       );
     }
 
+    //for each
+  //.find to get count from static date, take object.info
+
   getMarkers(): Parking[] {
     return this.park;
   }
@@ -51,7 +54,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Studio Park Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'McConnell Lower',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -60,7 +63,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Market St Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: '201 Market',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -78,7 +81,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Weston Commerce Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Weston Commerce Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -87,7 +90,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'The Gallery Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Gallery Ramp',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -96,7 +99,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Ottawa Fulton Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Ottawa Fulton',
       options: {
         icon: iconBase + 'parking_lot_maps.png'
       }
@@ -105,7 +108,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Monroe Center Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Monroe Center',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -114,7 +117,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Pearl Ionia Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Pearl Ionia',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -123,7 +126,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'DeVos Place Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Devos Place',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -132,7 +135,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Government Center Ramp',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Government Center',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -141,7 +144,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 3 Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Area 3',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -150,7 +153,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 2 Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Area 2',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -159,7 +162,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 6A Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Area 6',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -168,7 +171,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 9 Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Area 9',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -177,7 +180,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 8 Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Area 8',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -186,7 +189,7 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Area 7 Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Area 7',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
@@ -195,16 +198,12 @@ export class ParkingMarkersService {
       type: 'parking',
       info: this.infoContent,
       title: 'Scribner Lot',
-      lot_name: 'Cherry Commerce Ramp',
+      lot_name: 'Scribner',
       options: {
         icon: iconBase + 'parking_lot_maps.png',
       }
     },
 
   ];
-
-  
-  //for each
-  //.find to get count from static date, take object.info
 
 }
