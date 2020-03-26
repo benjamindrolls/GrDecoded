@@ -46,11 +46,11 @@ By using the app, the user will not have to drive around searching for parking, 
 ***
 # Technologies that are used to build this project: 
 | Base Code | Google Maps API's | City of Grand Rapids Api |
-| --- | --- |  ----| 
-**NodeJS**     | **Geolocation**  for the distance |  
-**Angular 9**  | **location** |   
-**HTML**       | **places** for the resturants |
-**CSS**        |    
+| --- | --- |  ---- | 
+**NodeJS**     | **Geolocation**  for the distance  |  [On-Street Parking - Two Year](https://data.grandrapidsmi.gov/resource/pitz-92py.json)          | 
+**Angular 9**  | **location**                       |  [On-Street Parking Rates](https://data.grandrapidsmi.gov/resource/sndu-g7h2.json)  
+**HTML**       | **places** for the resturants      |  [On-Street Parking Zones](https://data.grandrapidsmi.gov/resource/s2v3-jher.json) 
+**CSS**        |                                    |  [Fees in cents api](https://data.grandrapidsmi.gov/resource/pitz-92py.json?fee_in_cents=0) 
 **JavaScript** |
 **TypeScript** |
 **gh-pages**   |
