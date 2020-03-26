@@ -1,8 +1,9 @@
-import { Injectable } from "@angular/core";
+import { Injectable, ViewChild} from "@angular/core";
 import { Restaurant } from "./restaurant";
+import { MapInfoWindow } from "@angular/google-maps";
 
 //icon from google base - need to find a not-broken link
-let foodIcon = "http://maps.google.com/mapfiles/kml/paddle/";
+let foodIcon = "http://maps.google.com/mapfiles/kml/pal2/icon37.png";
 
 @Injectable({
   providedIn: "root"
@@ -12,6 +13,8 @@ let foodIcon = "http://maps.google.com/mapfiles/kml/paddle/";
 
 //Restaurants array
 export class RestaurantService {
+  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
+  //TESTING INFO WINDOW CONTENT DELETE
   infoContent = "Test";
 
   restaurants: Restaurant[] = [
@@ -22,7 +25,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.963, -85.67064),
       site: "https://www.hopcat.com/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon
       }
     },
     {
@@ -32,7 +35,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.961855, -85.669396),
       site: "https://www.stellasgr.com/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon
       }
     },
     {
@@ -42,7 +45,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.96203, -85.668106),
       site: "https://rockwellrepublic.com/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon 
       }
     },
     {
@@ -52,7 +55,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.96309, -85.66521),
       site: "https://cottagebar.biz/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon
       }
     },
     {
@@ -62,7 +65,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.965869, -85.673063),
       site: "http://www.zsbar.com/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon
       }
     },
     {
@@ -72,7 +75,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.967330, -85.672012),
       site: "https://thechophousegrandrapids.com/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon
       }
     },
     {
@@ -82,7 +85,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.963326, -85.669587),
       site: "https://www.sanchezbistro.com/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon
       }
     },
     {
@@ -92,7 +95,7 @@ export class RestaurantService {
       position: new google.maps.LatLng(42.962211, -85.673192),
       site: "https://bistrobellavita.com/",
       options: {
-        icon: foodIcon + "ltblu-stars.png"
+        icon: foodIcon 
       }
     },
   ];
@@ -100,16 +103,14 @@ export class RestaurantService {
 
   constructor() {}
 
-//Compiles array in gmap comp
   getRestaurant(): Restaurant[] {
-    for (const restaurants of this.restaurants) {
-        restaurants.info = [restaurants.name +
-        '\n' + '\n' + '\n' + '\n' +
-        restaurants.address +
-        '\n' + '\n' +
-        restaurants.site];
+    for (const restaurant of this.restaurants) {
+      restaurant.info = [
+    '<div class="r_name">'+ restaurant.name + '</div>'+
+    '<div class="r_address">'+ restaurant.address + '</div>'+
+    '<a class="r_link" href="'+ restaurant.site +'" target="_blank">'+ restaurant.site +'/>'
+      ];
     }
     return this.restaurants;
   }
-
 }

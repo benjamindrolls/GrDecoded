@@ -14,7 +14,7 @@ let starIcon = "http://maps.google.com/mapfiles/kml/paddle/";
 export class VenuesService {
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
   //TESTING INFO WINDOW CONTENT DELETE
-  infoContent = "Here";
+  infoContent = "Test";
 
   //Venue Information Array {{MAKE FUNCTION TO FILL IN INFORMATION TO INFO WINDOW}}
   venues: Venue[] = [
