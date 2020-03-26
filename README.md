@@ -7,9 +7,9 @@
 
 
 <!-- # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/) -->
-| Image | **Team Member Name** | Team Member Contact |  
-|---| --- | --- |
-<img src = './src/assets/spencer.jpg' alt = 'Spencer Image' width ="100" height="100"> **Spencer Deering**    | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  
+|     | ** Team Member Contact** |  
+|---| --- |
+|<img src = './src/assets/spencer.jpg' alt = 'Spencer Image' width ="75" height="75">  **Spencer Deering** | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  |
 **Jordan Gaza**        | **[LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)**  
 **Benjamin Rolls**     | **[LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)**  
 **Ramona Saintandre**  | **[LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)**  
