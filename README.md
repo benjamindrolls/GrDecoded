@@ -7,11 +7,13 @@
 
 
 <!-- # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/) -->
-### *Spencer Deering*    [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
-### *Jordan Gaza*        [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
-### *Benjamin Rolls*     [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
-### *Ramona Saintandre* [LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)  
-### *Kevin Marusek*     [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
+| Team Member Name | Team Member Contact |  
+| --- | --- |
+Spencer Deering | [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/) |  
+Jordan Gaza     |   [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
+Benjamin Rolls  |  [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
+Ramona Saintandre | [LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)  
+Kevin Marusek  |  [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
 <style
   type="text/css">
 h3 {color:green;}
