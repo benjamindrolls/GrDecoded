@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Output } from '@angular/core';
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 
 import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-restaurants',
@@ -12,9 +13,12 @@ import { RestaurantService } from "../restaurant.service";
 export class RestaurantsComponent implements OnInit {
   infoContent: string;
   restaurant: Restaurant[];
+  restaurants: any;
   constructor(
     public rService: RestaurantService
   ) { }
+
+  @Output() rDirections = new EventEmitter()
 
   //Decorator for Info Pop Ups
   @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
@@ -23,6 +27,11 @@ export class RestaurantsComponent implements OnInit {
         //Call Restaurant Markers
         this.restaurant = this.rService.getRestaurant();
   }//--End of Initialization
+
+  setRestaurants(position) {
+    this.restaurants = position
+    this.rDirections.emit(this.restaurants)
+  }
 
   //opening info content
 
