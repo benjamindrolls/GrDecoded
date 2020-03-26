@@ -1,8 +1,8 @@
 
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
-
-
+ 
 # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
+
 ### *Spencer Deering*  [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
 ### *Jordan Gaza* [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
 ### *Benjamin Rolls* [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
@@ -37,7 +37,7 @@ Upon clicking each parking location, a tab will appear displaying the name of th
 
 We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
 
-![DestinationGR Demo](./src/assets/destinationGR.gif) 
+<iframe src="https://giphy.com/embed/htjOhz6HG7qAJGaQw9" width="404" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/destinationgr-demo-htjOhz6HG7qAJGaQw9">DestinationGR Demo</a></p>
 <!-- **Conclusion**  -->
 
 # ***Project specification on how to run the project*** 
