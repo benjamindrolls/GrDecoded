@@ -340,8 +340,8 @@ export class GmapComponent implements OnInit, AfterViewInit {
   //method that calls a directions request and then displays them on map
   setDirections() {
     let request = {
-      origin: this.venues || this.restaurants || this.coords,
-      destination: this.coords || this.restaurants || this.venues,
+      origin: this.coords,
+      destination: this.restaurants || this.venues,
       travelMode: google.maps.TravelMode.WALKING
     };
     if (request.origin && request.destination) {
@@ -351,7 +351,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
         }
       })
     } else {
-      this.snackBar.open('Click on venue, parking structure or restaurant to get directions', '', {
+      this.snackBar.open('Click on parking area, and then choose a venue or a restaurant to get directions', '', {
         duration: 2000
       })
     }
@@ -365,5 +365,6 @@ export class GmapComponent implements OnInit, AfterViewInit {
     this.infoWindow.open(marker);
     console.log('info opened');
   }
+  
 
 }//--End of Export 
