@@ -23,6 +23,9 @@ export class ParkingMarkersService {
       );
     }
 
+    //for each
+  //.find to get count from static date, take object.info
+
   getMarkers(): Parking[] {
     return this.park;
   }
@@ -202,9 +205,5 @@ export class ParkingMarkersService {
     },
 
   ];
-
-  
-  //for each
-  //.find to get count from static date, take object.info
 
 }
