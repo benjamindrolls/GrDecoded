@@ -1,41 +1,65 @@
 
 <img src = './src/assets/logo.jpg' alt = 'Logo Image'>
-
-
-# *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/)
-### *Spencer Deering*  [LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)  
-### *Jordan Gaza* [LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)  
-### *Benjamin Rolls* [LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)  
-### *Ramona Saintandre* [LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)  
-### *Kevin Marusek*  [LinkedIn](https://www.linkedin.com/in/kevin-marusek/)  
-
-
  
+<h1 align="center" </style>TEAM Members for DestinationGR App </h1>
 
- # **What problem are we trying to solve?** 
+
+
+
+<!-- # *TEAM Members*  for  [ **DestinationGR**](https://benjamindrolls.github.io/GrDecoded/) -->
+|     | **Team Member Contact** |  
+|---| --- |
+|<img src = './src/assets/spencer.jpg' alt = 'Spencer Deering Image' width ="75" height="75">  **Spencer Deering**   | **[LinkedIn](https://www.linkedin.com/in/spencer-deering-439845b9/)**  |
+|<img src = './src/assets/Jordan.jpg' alt = 'Jordan Gaza Image' width ="75" height="75"> **Jordan Gaza**             | **[LinkedIn](https://www.linkedin.com/in/jordan-k-gaza/)**  
+|<img src = './src/assets/Benjamin.jpg' alt = 'Benjamin Rolls Image' width ="75" height="75"> **Benjamin Rolls**     | **[LinkedIn](https://www.linkedin.com/in/benjamin-rolls-8b1788108/)**  
+|<img src = './src/assets/Ramona.jpg' alt = 'Ramona Saintandre Image' width ="75" height="75">**Ramona Saintandre**  | **[LinkedIn](https://www.linkedin.com/in/ramona-saintandre/)**  
+|<img src = './src/assets/kevin.jpg' alt = 'Kevin Marusek Image' width ="75" height="75">**Kevin Marusek**           | **[LinkedIn](https://www.linkedin.com/in/kevin-marusek/)**  
+
+## About the application 
+
+**Grand Rapids** vision and mission is to be nationally recognized as a welcoming, innovative, and collaborative city.   
+The **City of Grand Rapids** is a city of culture, divisity, and Art.   
+
+ **Grand Rapids** has become a destination city of the last decade, making it the entertainment capital of West Michigan.   
+
+Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that **Grand Rapids** has to offer. 
+
+Working with the **City of Grand Rapids** Parking Data, our Team has created an app that will assist vistor in navigating our City. 
+
 ***
-Grand Rapids has become a destination city of the last decade, making it the entertainment capital of West Michigan. 
 
-Numerous people travel from all over West Michigan weekly to experience the variety of concerts, plays, musicals, conventions and much more that Grand Rapids has to offer. 
+We have created an application that will allow a user to select a popular **Grand Rapids** destination.  
 
-We would like to make it even easier for the average person to experience Grand Rapids by providing a useful tool to navigate the city. 
+When the veunue is selected the user will be able to view all of the parking sturctures closest to the their destination.  
+Upon clicking each parking structure location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
 
-Our project seeks to grant access to a map outlining the variety of parking options and venue locations making it easier than ever to traverse Grand Rapids. 
+Then they will be able to select the  partking structure of their choice and using the Google maps to navigate to their selected destionation.     
+Upon clicking each major Venue the user will also be able to see what activities are available at that destination.  
 
-# **Why is this an important problem to solve?**
+By using the app, the user will not have to drive around searching for parking, or are able to park as close to their destionation as possible.   
+
+
 ***
-### *Team DestinationGR*  
-is excited to work on this project because it is something we can solve. 
+# Technologies that are used to build this project: 
+| Base Code | Google Maps API's | City of Grand Rapids Api |
+| --- | --- |  ---- | 
+**NodeJS**     | **Geolocation**  for the distance  |  [On-Street Parking - Two Year](https://data.grandrapidsmi.gov/resource/pitz-92py.json)          | 
+**Angular 9**  | **location**                       |  [On-Street Parking Rates](https://data.grandrapidsmi.gov/resource/sndu-g7h2.json)  
+**HTML**       | **places** for the resturants      |  [On-Street Parking Zones](https://data.grandrapidsmi.gov/resource/s2v3-jher.json) 
+**CSS**        |                                    |  [Fees in cents api](https://data.grandrapidsmi.gov/resource/pitz-92py.json?fee_in_cents=0) 
+**JavaScript** |
+**TypeScript** |
+**gh-pages**   |
+**google-maps**|
 
-Creating an easier experience for people looking to visit Grand Rapids not only provides on opportunity to boost tourism but allows those of us living here to support the city we love. 
 
-# **What City data have we used and what technologies we used?** 
-***
-We utilized the city parking data, displaying parking structures over a google map display 
 
-Upon clicking each parking location, a tab will appear displaying the name of the structure as well as the varying rates for different times of the day. 
+We utilized the city parking data, displaying parking structures over a google map display. 
 
-We have utilized HTML, CSS and JavaScript in an Angular framework for this project 
+We have utilized HTML, CSS and JavaScript in an Angular framework for this project   
+
+<!-- ![DestinationGR Demo](src/assets/destinationGR.gif) -->
+<img src = './src/assets/appimage.PNG' alt = 'app image'>
 
 <!-- **Conclusion**  -->
 

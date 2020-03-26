@@ -14,14 +14,14 @@ let starIcon = "http://maps.google.com/mapfiles/kml/paddle/";
 export class VenuesService {
   @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow
   //TESTING INFO WINDOW CONTENT DELETE
-  infoContent = "Test";
+  infoContents = "Test";
 
   //Venue Information Array {{MAKE FUNCTION TO FILL IN INFORMATION TO INFO WINDOW}}
   venues: Venue[] = [
     {
       Name: "DeVos Performance Hall",
       Address: " 303 Monroe Ave NW, Grand Rapids, MI 49503",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.968266, -85.672856),
       E1: [" Alice Cooper",  " Fri April 3",  " 8PM"],
       Link1: "https://www.devosperformancehall.com/events/2020/alice-cooper",
@@ -35,7 +35,7 @@ export class VenuesService {
     {
       Name: "20 Monroe Live",
       Address: " 11 Ottowa Ave NW, Grand Rapids, MI 49503",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.964056, -85.672489),
       E1: [" Prince Royce, Alter Ego Tour",  " Thurs April 16",  " 7PM"],
       Link1:
@@ -51,7 +51,7 @@ export class VenuesService {
     {
       Name: "Van Andel Arena",
       Address: " 130 Fulton St W, Grand Rapids, MI 49503",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.962587, -85.671583),
       E1: [
         " Elton John Farewell Yellow Brick Road Tour", 
@@ -71,7 +71,7 @@ export class VenuesService {
     {
       Name: "The Pyramid Scheme",
       Address: " 68 Commerce Ave SW, Grand Rapids, MI 49503",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.961458, -85.668827),
       E1: [" Music Against Human Trafficking",  " Thurs April 2",  " 7PM"],
       Link1:
@@ -86,7 +86,7 @@ export class VenuesService {
     {
       Name: "The Intersection",
       Address: " 113 Grandville Ave SW, Grand Rapids, MI 49503",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.960155, -85.673904),
       E1: [" Cycles",  " Wed April 8",  " 7PM"],
       Link1: "https://sectionlive.com/event/cycles/",
@@ -100,7 +100,7 @@ export class VenuesService {
     {
       Name: "The Listening Room",
       Address: " 123 Ionia Ave SW, Grand Rapids, MI 49503",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.960442, -85.670684),
       E1: [" Outer Vibe",  " Fri April 3",  " 7:30PM"],
       Link1: "https://listeningroomgr.com/shows-events/detail/Outer-Vibe",
@@ -114,7 +114,7 @@ export class VenuesService {
     {
       Name: "Grand Rapids Symphony",
       Address: " 300 Ottawa Ave NW, Ste 100, Grand Rapids, MI 49503",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.969416, -85.669508),
       E1: [" Mozart & Haydn",  " Fri April 3",  " 8PM"],
       Link1: "https://www.grsymphony.org/mozart-haydn",
@@ -128,7 +128,7 @@ export class VenuesService {
     {
       Name: "Meijer Gardens",
       Address: " 1000 E Beltline Ave NE, Grand Rapids, MI 49525",
-      info: this.infoContent,
+      info: this.infoContents,
       position: new google.maps.LatLng(42.979845, -85.585671),
       E1: [" Gregory Alan Isakov",  " Sun June 7",  " 7PM"],
       Link1: "https://www.meijergardens.org/calendar/isakov20/",
