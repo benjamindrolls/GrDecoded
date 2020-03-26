@@ -4,7 +4,6 @@ import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
-import { ParkingAPIService } from '../parking-api.service';
 import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
 
@@ -22,7 +21,6 @@ export class GmapComponent implements OnInit {
     private pService: ParkingMarkersService,
     public vService: VenuesService,
     // private direction: DirectionsService,
-    public parking: ParkingAPIService,
     public rService: RestaurantService
   ) { }
 
