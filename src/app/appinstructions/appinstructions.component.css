@@ -1,16 +1,17 @@
-
+.container{
+  
+  border:2px solid black;
+  flex-direction: column;
+  width: 100vw;
+  display: flex;
+}
 p{
-  width: 100px;
-  height: 500px;
+  
   box-sizing: border-box;
   flex-direction: row;
   display: flex;
 }
-.container{
-  border:2px solid black;
-  flex-direction: row;
-  display: flex;
-}
+
 ul{
   list-style-type: none;
   margin: 0;
