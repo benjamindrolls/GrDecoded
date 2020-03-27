@@ -3,12 +3,12 @@ p{
   width: 100px;
   height: 500px;
   box-sizing: border-box;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
 }
 .container{
   border:2px solid black;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
 }
 ul{
