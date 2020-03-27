@@ -1,11 +1,15 @@
 
 p{
-  width: 300px;
+  width: 100px;
   height: 500px;
   box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
 }
-.intro{
+.container{
   border:2px solid black;
+  flex-direction: column;
+  display: flex;
 }
 ul{
   list-style-type: none;
