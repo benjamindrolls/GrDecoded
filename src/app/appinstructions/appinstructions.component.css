@@ -4,6 +4,9 @@ p{
   height: 500px;
   box-sizing: border-box;
 }
+.intro{
+  border:2px solid black;
+}
 ul{
   list-style-type: none;
   margin: 0;
