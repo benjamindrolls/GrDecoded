@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
+import { Component, OnInit, ViewChild, AfterViewInit, Input } from "@angular/core";
 import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
@@ -25,6 +25,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
   restaurant: Restaurant[];
   directionService = new google.maps.DirectionsService();
   DirectionsRenderer = new google.maps.DirectionsRenderer();
+  isbuttonVisible: boolean = false;
   constructor(
     public pService: ParkingMarkersService,
     public vService: VenuesService,
@@ -306,7 +307,6 @@ export class GmapComponent implements OnInit, AfterViewInit {
     //Call Restaurant Markers
     // this.restaurant = this.rService.getRestaurant();
 
-
   }//--End of Initialization
 
   //renders the directions to the map
@@ -332,20 +332,21 @@ export class GmapComponent implements OnInit, AfterViewInit {
   }
 
   //method that set coordinates for venues
-  setVenue(position) {
-    this.venues = position
+  setVenue(event) {
+    this.venues = event
 
     return this.venues
   }
 
-  setRestaurant(position) {
-    this.restaurants = position
+  setRestaurant(event) {
+    this.restaurants = event
 
     return this.restaurants
   }
 
   //method that calls a directions request and then displays them on map
   setDirections() {
+    this.DirectionsRenderer.setMap(this.map._googleMap)
     let request = {
       origin: this.coords,
       destination: this.restaurants || this.venues,
@@ -362,6 +363,11 @@ export class GmapComponent implements OnInit, AfterViewInit {
         duration: 2000
       })
     }
+  }
+
+  //stops direction from being rendered on the map
+  stopDirections(){
+  this.DirectionsRenderer.setMap(null)
   }
 
 

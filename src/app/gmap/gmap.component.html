@@ -8,13 +8,14 @@
     <map-info-window>
       <div [innerHTML]=infoContent></div>
       <button (click)="setDirections()">Get Directions</button>
+      <button (click)="stopDirections()">Stop Directions</button>
     </map-info-window>
 
   </map-marker>
   <!-- End Parking Marker -->
 
-  <app-venues></app-venues>
- 
-  <app-restaurants></app-restaurants>
-  
+  <app-venues (vDirections)="setVenue($event)"></app-venues>
+
+  <app-restaurants (rDirections)="setRestaurant($event)"></app-restaurants>
+
 </google-map>
