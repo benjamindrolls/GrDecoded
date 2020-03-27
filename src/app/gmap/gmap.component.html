@@ -1,7 +1,7 @@
 <google-map height="84vh" width="100%" [zoom]="zoom" [center]="center" [options]="options" id="map">
 
    <!-- Parking Marker -->
-  <map-marker #markerElem *ngFor="let marker of park" [position]="marker.position" [label]="marker.label"
+  <map-marker #markerElem *ngFor="let marker of pService.park" [position]="marker.position" [label]="marker.label"
     [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker.info)"
     (mapClick)="setPosition(marker.position)">
 

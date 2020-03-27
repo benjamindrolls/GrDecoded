@@ -26,7 +26,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
   directionService = new google.maps.DirectionsService();
   DirectionsRenderer = new google.maps.DirectionsRenderer();
   constructor(
-    private pService: ParkingMarkersService,
+    public pService: ParkingMarkersService,
     public vService: VenuesService,
     // public parking: ParkingAPIService,
     public rService: RestaurantService,
@@ -295,7 +295,10 @@ export class GmapComponent implements OnInit, AfterViewInit {
     };
 
     //Call Parking Markers
-    this.park = this.pService.getMarkers();
+    this.park = this.pService.park;
+    
+    this.pService.getFilteredData()
+    console.log(this.pService.park)
 
     //Call Venue Markers
     // this.venue = this.vService.getVenue();
