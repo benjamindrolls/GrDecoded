@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { AppinstructionsComponent } from './appinstructions/appinstructions.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
     ParkingAPIComponent,
     VenuesComponent,
     RestaurantsComponent,
+    AppinstructionsComponent,
   ],
   imports: [
     BrowserModule,
