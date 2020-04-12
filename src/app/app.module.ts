@@ -12,7 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { AppinstructionsComponent } from './appinstructions/appinstructions.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { AppinstructionsComponent } from './appinstructions/appinstructions.comp
     GoogleMapsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    MatButtonModule
     
   ],
   providers: [],

@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AppinstructionsComponent } from './appinstructions/appinstructions.component';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
- 
+ constructor(public dialog: MatDialog){}
 
   ngOnInit() {
-    
-  }
+    this.dialog.open(AppinstructionsComponent, {
+      panelClass: 'openingInstructions'
+    })
+  } 
 
   dropdown() {
     let menu = document.getElementById("dropdown-menu");

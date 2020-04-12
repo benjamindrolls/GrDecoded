@@ -24,6 +24,7 @@ export class VenuesComponent implements OnInit {
   venues: any
 
   @Output() vDirections = new EventEmitter()
+  
 
   //Decorator for Info Pop Ups
   @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
@@ -38,24 +39,6 @@ export class VenuesComponent implements OnInit {
     this.venues = position
     this.vDirections.emit(this.venues)
   }
-
-  setDirections() {
-    let request = {
-      origin: this.restaurants,
-      destination: this.venues,
-      travelMode: google.maps.TravelMode.WALKING
-    };
-    if (request.origin && request.destination) {
-      this.directionService.route(request, (result, status) => {
-        if (status === "OK") {
-          this.DirectionsRenderer.setDirections(result)
-        }
-      })
-    } else {
-      console.log('hello')
-    }
-  }
-
 
   openInfo(marker: MapMarker, content) {
     this.infoContent = content;
