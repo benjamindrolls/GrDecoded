@@ -13,7 +13,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { AppinstructionsComponent } from './appinstructions/appinstructions.component';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule
     
   ],
   providers: [],

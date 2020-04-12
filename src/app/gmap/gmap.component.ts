@@ -32,7 +32,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
     // public parking: ParkingAPIService,
     public rService: RestaurantService,
     private snackBar: MatSnackBar,
-  // restaurant: Restaurant[];
+    // restaurant: Restaurant[];
   ) { }
 
   //Decorator for Map
@@ -297,15 +297,8 @@ export class GmapComponent implements OnInit, AfterViewInit {
 
     //Call Parking Markers
     this.park = this.pService.park;
-    
+
     this.pService.getFilteredData()
-    console.log(this.pService.park)
-
-    //Call Venue Markers
-    // this.venue = this.vService.getVenue();
-
-    //Call Restaurant Markers
-    // this.restaurant = this.rService.getRestaurant();
 
   }//--End of Initialization
 
@@ -366,8 +359,8 @@ export class GmapComponent implements OnInit, AfterViewInit {
   }
 
   //stops direction from being rendered on the map
-  stopDirections(){
-  this.DirectionsRenderer.setMap(null)
+  stopDirections() {
+    this.DirectionsRenderer.setMap(null)
   }
 
 
@@ -378,6 +371,6 @@ export class GmapComponent implements OnInit, AfterViewInit {
     this.infoWindow.open(marker);
     console.log('info opened');
   }
-  
+
 
 }//--End of Export 
