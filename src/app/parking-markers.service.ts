@@ -78,7 +78,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.960232, -85.675817),
         type: 'parking',
-        info: this.infoContent('201 Market', 'Market St Lot', 'daily rate only $5.00'),
+        info: this.infoContent('201 Market', 'Market St Lot', 'daily rate only, $5.00'),
         title: 'Market St Lot',
         lot_name: '201 Market',
         options: {
@@ -159,7 +159,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.961747, -85.670640),
         type: 'parking',
-        info: this.infoContent('Area 3', 'area 3 Lot', 'daily rate only $10.00'),
+        info: this.infoContent('Area 3', 'area 3 Lot', 'daily rate only, $10.00'),
         title: 'Area 3 Lot',
         lot_name: 'Area 3',
         options: {
@@ -168,7 +168,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.960949, -85.672900),
         type: 'parking',
-        info: this.infoContent('Area 2', 'Area 2 Lot', 'daily rate only $12.00'),
+        info: this.infoContent('Area 2', 'Area 2 Lot', 'daily rate only, $12.00'),
         title: 'Area 2 Lot',
         lot_name: 'Area 2',
         options: {
@@ -177,7 +177,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.959790, -85.672032),
         type: 'parking',
-        info: this.infoContent('Area 6', 'Area 6A Lot', 'daily rate only $8.00'),
+        info: this.infoContent('Area 6', 'Area 6A Lot', 'daily rate only, $8.00'),
         title: 'Area 6A Lot',
         lot_name: 'Area 6',
         options: {
@@ -186,7 +186,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.968555, -85.682164),
         type: 'parking',
-        info: this.infoContent('Area 9', 'Area 9 Lot', 'daily rate only $2.00'),
+        info: this.infoContent('Area 9', 'Area 9 Lot', 'daily rate only, $2.00'),
         title: 'Area 9 Lot',
         lot_name: 'Area 9',
         options: {
@@ -195,7 +195,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.969684, -85.681558),
         type: 'parking',
-        info: this.infoContent('Area 8', 'Area 8 Lot', 'daily rate only $3.00'),
+        info: this.infoContent('Area 8', 'Area 8 Lot', 'daily rate only, $3.00'),
         title: 'Area 8 Lot',
         lot_name: 'Area 8',
         options: {
@@ -204,7 +204,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.968720, -85.679386),
         type: 'parking',
-        info: this.infoContent('Area 7', 'Area 7 Lot', 'daily rate only $2.00'),
+        info: this.infoContent('Area 7', 'Area 7 Lot', 'daily rate only, $2.00'),
         title: 'Area 7 Lot',
         lot_name: 'Area 7',
         options: {
@@ -213,7 +213,7 @@ export class ParkingMarkersService {
       }, {
         position: new google.maps.LatLng(42.968938, -85.677990),
         type: 'parking',
-        info: this.infoContent('Scribner', 'Scribner Lot', 'daily rate only $4.00'),
+        info: this.infoContent('Scribner', 'Scribner Lot', 'daily rate only, $4.00'),
         title: 'Scribner Lot',
         lot_name: 'Scribner',
         options: {
