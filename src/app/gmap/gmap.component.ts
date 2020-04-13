@@ -4,14 +4,9 @@ import { ParkingMarkersService } from "../parking-markers.service";
 import { Parking } from "../parking";
 import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
-// import { ParkingAPIService } from '../parking-api.service';
 import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
 import { MatSnackBar } from '@angular/material/snack-bar';
-// import { Venue } from '../venue';
-// import { VenuesService } from "../venues.service";
-// import { Restaurant } from "../restaurant";
-// import { RestaurantService } from "../restaurant.service";
 
 @Component({
   selector: "app-gmap",
