@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoogleMapsModule } from '@angular/google-maps';
@@ -14,6 +13,9 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { AppinstructionsComponent } from './appinstructions/appinstructions.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { DirectionsComponent } from './directions/directions.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
     VenuesComponent,
     RestaurantsComponent,
     AppinstructionsComponent,
+    DirectionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatFormFieldModule
     
   ],
   providers: [],

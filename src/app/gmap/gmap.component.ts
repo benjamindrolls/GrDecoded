@@ -8,6 +8,7 @@ import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DirectionsComponent } from '../directions/directions.component';
 
 @Component({
   selector: "app-gmap",
@@ -26,10 +27,8 @@ export class GmapComponent implements OnInit, AfterViewInit {
     public dialog: MatDialog,
     public pService: ParkingMarkersService,
     public vService: VenuesService,
-    // public parking: ParkingAPIService,
     public rService: RestaurantService,
     private snackBar: MatSnackBar,
-    // restaurant: Restaurant[];
   ) { }
 
   //Decorator for Map
@@ -335,24 +334,30 @@ export class GmapComponent implements OnInit, AfterViewInit {
   }
 
   //method that calls a directions request and then displays them on map
-  setDirections() {
-    this.DirectionsRenderer.setMap(this.map._googleMap)
-    let request = {
-      origin: this.coords,
-      destination: this.restaurants || this.venues,
-      travelMode: google.maps.TravelMode.WALKING
-    };
-    if (request.origin && request.destination) {
-      this.directionService.route(request, (result, status) => {
-        if (status === "OK") {
-          this.DirectionsRenderer.setDirections(result)
-        }
-      })
-    } else {
-      this.snackBar.open('Click on parking area, and then choose a venue or a restaurant to get directions', '', {
-        duration: 2000
-      })
-    }
+  // setDirections() {
+  //   this.DirectionsRenderer.setMap(this.map._googleMap)
+  //   let request = {
+  //     origin: this.coords,
+  //     destination: this.restaurants || this.venues,
+  //     travelMode: google.maps.TravelMode.WALKING
+  //   };
+  //   if (request.origin && request.destination) {
+  //     this.directionService.route(request, (result, status) => {
+  //       if (status === "OK") {
+  //         this.DirectionsRenderer.setDirections(result)
+  //       }
+  //     })
+  //   } else {
+  //     this.snackBar.open('Click on parking area, and then choose a venue or a restaurant to get directions', '', {
+  //       duration: 2000
+  //     })
+  //   }
+  // }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DirectionsComponent, {
+      data: {venues: this.venues, restaurants: this.restaurants}
+    })
   }
 
   //stops direction from being rendered on the map
