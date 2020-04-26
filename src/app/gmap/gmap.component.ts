@@ -6,6 +6,7 @@ import { Venue } from '../venue';
 import { VenuesService } from "../venues.service";
 import { Restaurant } from "../restaurant";
 import { RestaurantService } from "../restaurant.service";
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -22,6 +23,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
   DirectionsRenderer = new google.maps.DirectionsRenderer();
   isbuttonVisible: boolean = false;
   constructor(
+    public dialog: MatDialog,
     public pService: ParkingMarkersService,
     public vService: VenuesService,
     // public parking: ParkingAPIService,
