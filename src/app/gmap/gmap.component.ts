@@ -358,6 +358,11 @@ export class GmapComponent implements OnInit, AfterViewInit {
     const dialogRef = this.dialog.open(DirectionsComponent, {
       data: {venues: this.venues, restaurants: this.restaurants}
     })
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('dialog closed');
+      this.venues = result;
+    })
   }
 
   //stops direction from being rendered on the map
