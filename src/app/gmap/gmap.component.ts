@@ -361,7 +361,7 @@ export class GmapComponent implements OnInit, AfterViewInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('dialog closed');
-      this.venues = result;
+      this.venues, this.park = result;
     })
   }
 

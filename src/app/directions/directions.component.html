@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Get your directions here!</h1>
+<div mat-dialog-content>
+    <p>Pick start and end point to get directions.</p>
+    <mat-form-field>
+        <mat-select>
+            <mat-option id="end" *ngFor="let venue of venues" [value]="venue.Name">
+                {{venue.Name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select>
+            <mat-option id="start" *ngFor="let park of parking" [value]="park.title">
+                {{park.title}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button>Submit</button>
+</div>
